@@ -1,0 +1,35 @@
+.bar {
+  background: var(--dark-3);
+  border-bottom: 0.5px solid var(--line);
+  overflow: hidden;
+  padding: 12px 0;
+
+  &:hover .track {
+    animation-play-state: paused;
+  }
+}
+
+.track {
+  animation: marquee 28s linear infinite;
+  display: flex;
+  gap: 36px;
+  width: max-content;
+}
+
+.item {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  gap: 36px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &::after {
+    color: var(--accent-2);
+    content: "*";
+    font-size: 10px;
+  }
+}

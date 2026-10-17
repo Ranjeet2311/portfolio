@@ -1,0 +1,100 @@
+@use "../styles/responsive" as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  align-items: start;
+  border-bottom: 0.5px solid var(--surface);
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 168px 1fr;
+  padding: 24px 0;
+  transition: background 0.2s;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &:hover {
+    background: var(--surface-2);
+    border-radius: var(--radius-xs);
+    margin: 0 -12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.period {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  gap: 4px;
+  margin-bottom: 6px;
+
+  i {
+    font-size: 11px;
+  }
+}
+
+.current {
+  background: var(--success-bg);
+  border: 0.5px solid var(--success-border);
+  border-radius: 100px;
+  color: var(--success-text);
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+}
+
+.role {
+  align-items: center;
+  color: var(--ink);
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 6px;
+  margin-bottom: 3px;
+
+  i {
+    color: var(--accent-3);
+    font-size: 14px;
+  }
+}
+
+.company {
+  align-items: center;
+  color: var(--accent);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  gap: 4px;
+  margin-bottom: 9px;
+
+  i {
+    font-size: 12px;
+  }
+}
+
+.note {
+  color: var(--mid);
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+@include down("mobile") {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

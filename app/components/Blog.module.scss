@@ -1,0 +1,234 @@
+@use "../styles/responsive" as *;
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.featured {
+  background: var(--white);
+  border: 0.5px solid var(--line);
+  border-radius: var(--radius);
+  color: inherit;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+
+  &:hover {
+    border-color: var(--accent-3);
+    box-shadow: 0 12px 32px var(--accent-shadow-card);
+    transform: translateY(-3px);
+
+    .read i {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.featuredImage,
+.cardImage {
+  align-items: center;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    background: radial-gradient(circle at 30% 60%, var(--image-glow) 0%, transparent 60%);
+    content: "";
+    inset: 0;
+    position: absolute;
+  }
+
+  i {
+    color: var(--dark-line);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.featuredImage {
+  min-height: 240px;
+
+  i {
+    font-size: 64px;
+  }
+}
+
+.featuredBody {
+  padding: 36px;
+}
+
+.featuredTag {
+  align-items: center;
+  background: var(--glow);
+  border: 0.5px solid var(--accent-border-soft);
+  border-radius: 100px;
+  color: var(--accent);
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  gap: 6px;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+  padding: 4px 12px;
+}
+
+.featuredTitle {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+
+  i {
+    color: var(--accent);
+    font-style: italic;
+  }
+}
+
+.featuredExcerpt {
+  color: var(--mid);
+  font-size: 13px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.featuredMeta,
+.cardMeta {
+  align-items: center;
+  display: flex;
+  font-family: var(--font-mono);
+  gap: 16px;
+
+  span {
+    align-items: center;
+    color: var(--muted);
+    display: flex;
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  i {
+    color: var(--accent-3);
+    font-size: 13px;
+  }
+}
+
+.read {
+  align-items: center;
+  color: var(--accent);
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 700;
+  gap: 6px;
+  letter-spacing: 0.02em;
+  margin-top: 16px;
+
+  i {
+    font-size: 14px;
+    transition: transform 0.2s;
+  }
+}
+
+.card {
+  background: var(--white);
+  border: 0.5px solid var(--line);
+  border-radius: var(--radius);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+
+  &:hover {
+    border-color: var(--accent-3);
+    box-shadow: 0 12px 32px var(--accent-shadow-card);
+    transform: translateY(-4px);
+  }
+}
+
+.cardImage {
+  height: 140px;
+
+  i {
+    font-size: 40px;
+  }
+}
+
+.cardBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.cardTag {
+  align-items: center;
+  color: var(--accent);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  gap: 4px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.cardExcerpt {
+  color: var(--mid);
+  flex: 1;
+  font-size: 12px;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.cardMeta {
+  border-top: 0.5px solid var(--line);
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+@include down("desktop") {
+  .grid,
+  .featured {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredImage {
+    min-height: 180px;
+  }
+}
+
+@include down("mobile") {
+  .featuredBody {
+    padding: 28px 24px;
+  }
+
+  .featuredMeta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,57 @@
+@use "../styles/responsive" as *;
+
+.footer {
+  align-items: center;
+  background: var(--footer-bg);
+  border-top: 1px solid var(--footer-line);
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 52px;
+}
+
+.left {
+  align-items: center;
+  color: var(--footer-text);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  gap: 8px;
+
+  i {
+    color: var(--footer-icon);
+    font-size: 13px;
+  }
+
+  em {
+    color: var(--accent-2);
+    font-style: normal;
+  }
+}
+
+.right {
+  display: flex;
+  gap: 16px;
+
+  a {
+    align-items: center;
+    color: var(--footer-text);
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    gap: 4px;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--accent-3);
+    }
+  }
+}
+
+@include down("mobile") {
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 24px;
+  }
+}

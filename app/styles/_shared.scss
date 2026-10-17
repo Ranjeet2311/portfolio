@@ -1,0 +1,127 @@
+@use "./responsive" as *;
+
+.section {
+  border-bottom: 0.5px solid var(--line);
+  padding: 80px 52px;
+}
+
+.white {
+  background: var(--white);
+}
+
+.warm {
+  background: var(--surface);
+}
+
+.tinted {
+  background: var(--surface-2);
+}
+
+.eyebrow {
+  align-items: center;
+  color: var(--accent-3);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  gap: 9px;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+
+  &::before {
+    background: var(--accent-3);
+    content: "";
+    height: 1px;
+    width: 14px;
+  }
+}
+
+.sectionHeading {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.1;
+  margin-bottom: 10px;
+
+  i {
+    color: var(--accent);
+    font-style: italic;
+  }
+}
+
+.sectionSub {
+  color: var(--mid);
+  font-size: 13.5px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+  max-width: 620px;
+}
+
+.button {
+  align-items: center;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 7px;
+  padding: 12px 22px;
+  text-decoration: none;
+  transition: all 0.2s var(--ease);
+
+  i {
+    font-size: 15px;
+  }
+}
+
+.primaryButton {
+  background: var(--ink);
+  color: var(--white);
+
+  &:hover {
+    background: var(--accent);
+    box-shadow: 0 8px 20px var(--accent-shadow-button);
+    transform: translateY(-2px);
+  }
+}
+
+.ghostButton {
+  background: var(--white);
+  border: 0.5px solid var(--line);
+  color: var(--mid);
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.pill {
+  background: var(--glow);
+  border: 0.5px solid var(--accent-border-soft);
+  border-radius: 100px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 3px 9px;
+}
+
+.mutedPill {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--muted);
+}
+
+@include down("mobile") {
+  .section {
+    padding: 60px 24px;
+  }
+}

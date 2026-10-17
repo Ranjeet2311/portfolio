@@ -1,0 +1,134 @@
+@use "../styles/responsive" as *;
+
+.nav {
+  align-items: center;
+  backdrop-filter: blur(16px);
+  background: var(--nav-background);
+  border-bottom: 0.5px solid var(--line);
+  display: flex;
+  height: 62px;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 48px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: background var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  z-index: 100;
+}
+
+.scrolled {
+  box-shadow: 0 4px 30px var(--nav-shadow);
+}
+
+.logo {
+  align-items: center;
+  color: var(--ink);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  gap: 9px;
+  text-decoration: none;
+
+  &:hover .logoDot {
+    transform: scale(1.5);
+  }
+}
+
+.logoDot {
+  background: var(--accent);
+  border-radius: 50%;
+  height: 8px;
+  transition: transform 0.3s var(--ease);
+  width: 8px;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.link {
+  align-items: center;
+  border-radius: 6px;
+  color: var(--muted);
+  display: flex;
+  font-size: 11px;
+  gap: 5px;
+  letter-spacing: 0.05em;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s, background 0.2s;
+
+  i {
+    font-size: 14px;
+  }
+
+  &:hover,
+  &.active {
+    background: var(--glow);
+    color: var(--accent);
+  }
+}
+
+.themeToggle {
+  background: var(--white);
+  border: 0.5px solid var(--line);
+  border-radius: 100px;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 8px 13px;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+
+  &:hover {
+    background: var(--glow);
+    border-color: var(--accent-3);
+    transform: translateY(-1px);
+  }
+}
+
+.cta {
+  align-items: center;
+  background: var(--accent);
+  border-radius: 100px;
+  color: var(--white);
+  display: flex;
+  font-size: 11px;
+  font-weight: 700;
+  gap: 6px;
+  padding: 9px 20px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+
+  i {
+    font-size: 14px;
+  }
+
+  &:hover {
+    background: var(--accent-2);
+    transform: translateY(-1px);
+  }
+}
+
+@include down("desktop") {
+  .links {
+    display: none;
+  }
+}
+
+@include down("mobile") {
+  .nav {
+    gap: 12px;
+    padding: 0 20px;
+  }
+
+  .cta {
+    display: none;
+  }
+}

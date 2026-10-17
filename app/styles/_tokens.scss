@@ -1,0 +1,86 @@
+:root {
+  --ink: #1a2418;
+  --ink-2: #2f4029;
+  --mid: #8c8478;
+  --muted: #b5aea0;
+  --line: #e8e3d8;
+  --surface: #f7f4ee;
+  --surface-2: #fdfbf6;
+  --white: #ffffff;
+  --accent: #2d6a4f;
+  --accent-2: #40916c;
+  --accent-3: #74c69d;
+  --gold: #f0a500;
+  --glow: rgba(45, 106, 79, 0.1);
+  --dark: #1a2418;
+  --dark-2: #202e1e;
+  --dark-3: #111a0f;
+  --dark-line: #253020;
+
+  --nav-background: rgba(253, 251, 246, 0.88);
+  --nav-shadow: rgba(26, 36, 24, 0.06);
+  --accent-border-soft: rgba(45, 106, 79, 0.2);
+  --accent-border: rgba(45, 106, 79, 0.25);
+  --accent-border-strong: rgba(45, 106, 79, 0.3);
+  --accent-shadow-soft: rgba(45, 106, 79, 0.06);
+  --accent-shadow-card: rgba(45, 106, 79, 0.08);
+  --accent-shadow-button: rgba(45, 106, 79, 0.25);
+  --accent-shadow-contact: rgba(45, 106, 79, 0.3);
+  --dark-shadow: rgba(0, 0, 0, 0.2);
+  --terminal-shadow: rgba(0, 0, 0, 0.35);
+  --image-glow: rgba(64, 145, 108, 0.22);
+
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
+  --success-text: #15803d;
+  --live-dot: #4ade80;
+  --terminal-red: #ff5f57;
+  --terminal-yellow: #ffbd2e;
+  --terminal-green: #28ca41;
+  --code-muted: #2a3828;
+  --code-keyword: #74c69d;
+  --code-string: #b7e4c7;
+  --code-text: #d8f3dc;
+
+  --dark-card: #202e1e;
+  --dark-card-hover: #253020;
+  --dark-muted: #53604c;
+  --dark-muted-2: #45543f;
+  --dark-copy: #77836f;
+  --dark-note: #5a6751;
+  --dark-icon: #394934;
+  --footer-bg: #0d1309;
+  --footer-line: #141e12;
+  --footer-text: #354330;
+  --footer-icon: #46563f;
+
+  --font-display: "Instrument Serif", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-xs: 7px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.55s;
+}
+
+:root[data-theme="ocean"] {
+  --ink: #142236;
+  --ink-2: #243b57;
+  --mid: #748093;
+  --muted: #9aa6b8;
+  --line: #dce5ef;
+  --surface: #f3f8fb;
+  --surface-2: #fbfdff;
+  --accent: #1d4ed8;
+  --accent-2: #2563eb;
+  --accent-3: #38bdf8;
+  --gold: #f59e0b;
+  --glow: rgba(37, 99, 235, 0.1);
+  --dark: #101c2d;
+  --dark-2: #17283e;
+  --dark-3: #091321;
+  --dark-line: #22334a;
+  --nav-background: rgba(251, 253, 255, 0.88);
+  --live-dot: #22d3ee;
+}
