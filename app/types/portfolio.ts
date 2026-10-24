@@ -38,13 +38,15 @@ export type ExperienceItem = {
   role: string;
   roleIcon: IconName;
   company: string;
+  dates?: string;
   companyIcon: IconName;
   note: string;
   tags: string[];
 };
 
 export type ProjectItem = {
-  href: string;
+  href?: string;
+  code?: string;
   icon: IconName;
   type: string;
   name: string;
@@ -64,13 +66,21 @@ export type FeaturedProject = {
 
 export type BlogPost = {
   href: string;
+  slug: string;
   icon: IconName;
   tag: string;
   title: ReactNode;
+  titleText: string;
   excerpt: string;
   date: string;
-  readTime: string;
+  readTime?: string;
+  sourceHref?: string;
   category?: string;
+  sections: {
+    heading: string;
+    paragraphs: string[];
+    bullets?: string[];
+  }[];
 };
 
 export type ContactLink = {

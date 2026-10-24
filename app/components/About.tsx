@@ -11,25 +11,28 @@ export function About({ strengths }: AboutProps) {
     <section className="section white" id="about">
       <div className="eyebrow reveal">01 - About me</div>
       <h2 className="sectionHeading reveal reveal-delay-1">
-        I don&apos;t just write code -
-        <br />I <i>architect solutions</i> that endure.
+        From websites to <i>application architecture</i>
       </h2>
 
       <div className={styles.grid}>
         <div className="reveal reveal-delay-2">
           <p className={styles.copy}>
-            With over a decade in full-stack development, I&apos;ve moved beyond writing features. I{" "}
-            <strong>own the full delivery loop</strong>: translating product requirements into
-            architecture, then shipping, monitoring, and iterating in production.
+            I started with websites more than ten years ago and moved into web applications.
+            Today I lead the frontend of a multi-tenant SaaS platform at Soamed, making the
+            architecture decisions and building authentication, organization switching, and
+            role-aware interfaces.
           </p>
           <p className={styles.copy}>
-            My approach is <strong>frontend-fluent and backend-grounded</strong>. I know when to
-            reach for Next.js, Angular, React, or Vue, and how to back each with API and data
-            decisions that will not need rewriting in six months.
+            My specialty is <strong>frontend architecture, backed by full-stack delivery</strong>.
+            I built a patient recovery app across the interface, API routes, and SQL database.
+            Earlier, I worked in XLAB&apos;s research team on Vue, Angular, and React applications
+            for businesses, public institutions, and European projects.
           </p>
           <p className={styles.copy}>
-            What sets me apart is <strong>craft and communication</strong>. I write code the next
-            engineer can live with, and I speak both product and engineering fluently.
+            Alongside my main role, I take on <strong>independent projects of any size</strong>:
+            a new web app, a bug fix, extra features, or a small business website. I work with
+            clients to choose an approach that fits the problem and budget, including Hugo
+            and WordPress when a simpler site is enough.
           </p>
         </div>
 

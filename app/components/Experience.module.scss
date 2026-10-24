@@ -87,14 +87,55 @@
   }
 }
 
+.dates {
+  color: var(--muted);
+}
+
 .note {
   color: var(--mid);
   font-size: 12.5px;
   line-height: 1.7;
 }
 
+.details {
+  border-top: 0.5px solid var(--line);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 36px;
+  padding-top: 28px;
+
+  > div {
+    align-items: flex-start;
+    display: flex;
+    gap: 12px;
+  }
+
+  > div > i {
+    color: var(--accent);
+    font-size: 20px;
+    margin-top: 2px;
+  }
+
+  h3 {
+    color: var(--ink);
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  p {
+    color: var(--mid);
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+}
+
 @include down("mobile") {
   .row {
+    grid-template-columns: 1fr;
+  }
+
+  .details {
     grid-template-columns: 1fr;
   }
 }

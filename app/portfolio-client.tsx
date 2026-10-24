@@ -7,27 +7,26 @@ import { Contact } from "./components/Contact";
 import {
   contactLinks,
   experience,
-  featuredProject,
   marqueeItems,
   navItems,
-  posts,
-  projects,
   stackGroups,
   stats,
-  strengths
+  strengths,
 } from "./data/portfolio";
 import { Experience } from "./components/Experience";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Marquee } from "./components/Marquee";
 import { Nav } from "./components/Nav";
+import { posts } from "./data/blog-posts";
+import { featuredProject, projects } from "./data/projects";
 import { Projects } from "./components/Projects";
 import { Stack } from "./components/Stack";
 
 type ThemeName = "forest" | "ocean";
 
 export default function PortfolioClient() {
-  const [theme, setTheme] = useState<ThemeName>("forest");
+  const [theme, setTheme] = useState<ThemeName>("ocean");
   const [activeId, setActiveId] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -58,7 +57,7 @@ export default function PortfolioClient() {
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
     );
 
     revealEls.forEach((el) => observer.observe(el));
@@ -77,15 +76,17 @@ export default function PortfolioClient() {
         activeId={activeId}
         isScrolled={isScrolled}
         items={navItems}
-        onThemeToggle={() => setTheme((current) => (current === "forest" ? "ocean" : "forest"))}
+        onThemeToggle={() =>
+          setTheme((current) => (current === "ocean" ? "forest" : "ocean"))
+        }
         theme={theme}
       />
       <Hero stats={stats} />
       <Marquee items={marqueeItems} />
       <About strengths={strengths} />
+      <Projects featured={featuredProject} projects={projects} />
       <Stack groups={stackGroups} />
       <Experience items={experience} />
-      <Projects featured={featuredProject} projects={projects} />
       <Blog posts={posts} />
       <Contact links={contactLinks} />
       <Footer year={2026} />

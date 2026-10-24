@@ -8,7 +8,7 @@ export type HeroProps = {
 
 export function Hero({ stats }: HeroProps) {
   return (
-    <section className={`${styles.hero} min-h-screen`} id="hero">
+    <section className={`${styles.hero}`} id="hero">
       <div className={styles.left}>
         <div>
           <div className={styles.available}>
@@ -24,9 +24,10 @@ export function Hero({ stats }: HeroProps) {
             and <i>last</i>
           </h1>
           <p className={styles.bio}>
-            Based in Ljubljana, Slovenia. I architect and ship responsive, maintainable full-stack
-            systems, from clean APIs to polished frontends, with 10+ years across national and
-            European projects.
+            Full-stack engineer based in Ljubljana, with 10+ years building
+            websites and web applications. I lead frontend architecture at
+            Soamed, from authentication and organization access to the details
+            of the interface.
           </p>
         </div>
 
@@ -48,9 +49,9 @@ export function Hero({ stats }: HeroProps) {
               <Icon name="ti-arrow-right" />
               View my work
             </a>
-            <a className="button ghostButton" download href="#">
-              <Icon name="ti-download" />
-              Download CV
+            <a className="button ghostButton" href="#contact">
+              <Icon name="ti-mail" />
+              Get in touch
             </a>
           </div>
         </div>
@@ -65,11 +66,13 @@ export function Hero({ stats }: HeroProps) {
             <span className={styles.termTitle}>ranjeet ~ zsh</span>
           </div>
           <div className={styles.termBody}>
-            <span className={styles.comment}>// senior full stack engineer</span>
+            <span className={styles.comment}>
+              // senior full stack engineer
+            </span>
             <br />
             <br />
-            <span className={styles.keyword}>const</span> <span className={styles.white}>profile</span>{" "}
-            = {"{"}
+            <span className={styles.keyword}>const</span>{" "}
+            <span className={styles.white}>profile</span> = {"{"}
             <br />
             &nbsp;&nbsp;<span className={styles.keyword}>name</span>:{" "}
             <span className={styles.string}>"Ranjeet"</span>,
@@ -86,11 +89,13 @@ export function Hero({ stats }: HeroProps) {
             <br />
             &nbsp;&nbsp;<span className={styles.keyword}>stack</span>: [
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>"Next.js"</span>,{" "}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span className={styles.string}>"Next.js"</span>,{" "}
             <span className={styles.string}>"Angular"</span>,{" "}
             <span className={styles.string}>"Django"</span>,
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>"TypeScript"</span>,{" "}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span className={styles.string}>"TypeScript"</span>,{" "}
             <span className={styles.string}>"Docker"</span>
             <br />
             &nbsp;&nbsp;],
@@ -101,7 +106,8 @@ export function Hero({ stats }: HeroProps) {
             {"};"}
             <br />
             <br />
-            <span className={styles.prompt}>▸</span> <span className={styles.string}>Ready to ship.</span>
+            <span className={styles.prompt}>▸</span>{" "}
+            <span className={styles.string}>Ready to ship.</span>
             <span className={styles.cursor} />
           </div>
         </div>

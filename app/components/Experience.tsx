@@ -12,11 +12,11 @@ export function Experience({ items }: ExperienceProps) {
     <section className="section white" id="experience">
       <div className="eyebrow reveal">03 - Experience</div>
       <h2 className="sectionHeading reveal reveal-delay-1">
-        Where I&apos;ve <i>made an impact</i>
+        Experience from <i>2014 to now</i>
       </h2>
       <p className="sectionSub reveal reveal-delay-2">
-        From individual contributor to full-stack lead, a record of consistent delivery across EU
-        projects.
+        Frontend architecture, full-stack client delivery, and web products built across India and
+        Slovenia.
       </p>
 
       <div className={styles.list}>
@@ -36,13 +36,31 @@ export function Experience({ items }: ExperienceProps) {
               </h3>
               <div className={styles.company}>
                 <Icon name={item.companyIcon} />
-                {item.company}
+                <span>{item.company}</span>
+                {item.dates ? <span className={styles.dates}>· {item.dates}</span> : null}
               </div>
               <p className={styles.note}>{item.note}</p>
-              <Pills items={item.tags} />
+              <Pills items={item.tags} mutedFrom={4} />
             </div>
           </article>
         ))}
+      </div>
+
+      <div className={`${styles.details} reveal`}>
+        <div>
+          <Icon name="ti-school" />
+          <div>
+            <h3>Education</h3>
+            <p>BA Programme, Delhi University, 2014</p>
+          </div>
+        </div>
+        <div>
+          <Icon name="ti-language" />
+          <div>
+            <h3>Languages</h3>
+            <p>English (native or bilingual), Hindi (native), Slovenian (elementary)</p>
+          </div>
+        </div>
       </div>
     </section>
   );

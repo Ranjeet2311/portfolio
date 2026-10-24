@@ -1,4 +1,72 @@
 :root {
+  // Ocean is the default theme so the first server-rendered paint is blue.
+  --ink: #142236;
+  --ink-2: #243b57;
+  --mid: #748093;
+  --muted: #9aa6b8;
+  --line: #dce5ef;
+  --surface: #f3f8fb;
+  --surface-2: #fbfdff;
+  --white: #ffffff;
+  --accent: #1d4ed8;
+  --accent-2: #2563eb;
+  --accent-3: #38bdf8;
+  --gold: #f59e0b;
+  --glow: rgba(37, 99, 235, 0.1);
+  --dark: #101c2d;
+  --dark-2: #17283e;
+  --dark-3: #091321;
+  --dark-line: #22334a;
+
+  --nav-background: rgba(251, 253, 255, 0.88);
+  --nav-shadow: rgba(20, 34, 54, 0.06);
+  --accent-border-soft: rgba(37, 99, 235, 0.2);
+  --accent-border: rgba(37, 99, 235, 0.25);
+  --accent-border-strong: rgba(37, 99, 235, 0.3);
+  --accent-shadow-soft: rgba(37, 99, 235, 0.06);
+  --accent-shadow-card: rgba(37, 99, 235, 0.08);
+  --accent-shadow-button: rgba(37, 99, 235, 0.25);
+  --accent-shadow-contact: rgba(37, 99, 235, 0.3);
+  --dark-shadow: rgba(0, 0, 0, 0.2);
+  --terminal-shadow: rgba(0, 0, 0, 0.35);
+  --image-glow: rgba(56, 189, 248, 0.22);
+
+  // Semantic colors are shared by both themes.
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
+  --success-text: #15803d;
+  --live-dot: #22d3ee;
+  --terminal-red: #ff5f57;
+  --terminal-yellow: #ffbd2e;
+  --terminal-green: #28ca41;
+  --code-muted: #26384f;
+  --code-keyword: #38bdf8;
+  --code-string: #bae6fd;
+  --code-text: #e0f2fe;
+
+  --dark-card: #17283e;
+  --dark-card-hover: #1d314b;
+  --dark-muted: #526579;
+  --dark-muted-2: #455b72;
+  --dark-copy: #8294a8;
+  --dark-note: #667a90;
+  --dark-icon: #31475e;
+  --footer-bg: #07101d;
+  --footer-line: #15243a;
+  --footer-text: #52677e;
+  --footer-icon: #657b92;
+
+  --font-display: "Instrument Serif", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-xs: 7px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.55s;
+}
+
+:root[data-theme="forest"] {
   --ink: #1a2418;
   --ink-2: #2f4029;
   --mid: #8c8478;
@@ -6,7 +74,6 @@
   --line: #e8e3d8;
   --surface: #f7f4ee;
   --surface-2: #fdfbf6;
-  --white: #ffffff;
   --accent: #2d6a4f;
   --accent-2: #40916c;
   --accent-3: #74c69d;
@@ -26,17 +93,9 @@
   --accent-shadow-card: rgba(45, 106, 79, 0.08);
   --accent-shadow-button: rgba(45, 106, 79, 0.25);
   --accent-shadow-contact: rgba(45, 106, 79, 0.3);
-  --dark-shadow: rgba(0, 0, 0, 0.2);
-  --terminal-shadow: rgba(0, 0, 0, 0.35);
   --image-glow: rgba(64, 145, 108, 0.22);
 
-  --success-bg: #f0fdf4;
-  --success-border: #bbf7d0;
-  --success-text: #15803d;
   --live-dot: #4ade80;
-  --terminal-red: #ff5f57;
-  --terminal-yellow: #ffbd2e;
-  --terminal-green: #28ca41;
   --code-muted: #2a3828;
   --code-keyword: #74c69d;
   --code-string: #b7e4c7;
@@ -53,34 +112,4 @@
   --footer-line: #141e12;
   --footer-text: #354330;
   --footer-icon: #46563f;
-
-  --font-display: "Instrument Serif", serif;
-  --font-body: "DM Sans", sans-serif;
-  --font-mono: "DM Mono", monospace;
-  --radius: 14px;
-  --radius-sm: 10px;
-  --radius-xs: 7px;
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --dur: 0.55s;
-}
-
-:root[data-theme="ocean"] {
-  --ink: #142236;
-  --ink-2: #243b57;
-  --mid: #748093;
-  --muted: #9aa6b8;
-  --line: #dce5ef;
-  --surface: #f3f8fb;
-  --surface-2: #fbfdff;
-  --accent: #1d4ed8;
-  --accent-2: #2563eb;
-  --accent-3: #38bdf8;
-  --gold: #f59e0b;
-  --glow: rgba(37, 99, 235, 0.1);
-  --dark: #101c2d;
-  --dark-2: #17283e;
-  --dark-3: #091321;
-  --dark-line: #22334a;
-  --nav-background: rgba(251, 253, 255, 0.88);
-  --live-dot: #22d3ee;
 }

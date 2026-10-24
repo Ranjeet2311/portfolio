@@ -17,7 +17,28 @@
 .grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.viewMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+
+  a {
+    align-items: center;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-sm);
+    color: var(--accent);
+    display: inline-flex;
+    font-size: 13px;
+    gap: 8px;
+    padding: 12px 20px;
+    text-decoration: none;
+
+    &:hover { background: var(--glow); }
+    &:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  }
 }
 
 .featured {
@@ -158,12 +179,34 @@
 
 .type {
   align-items: center;
-  color: var(--line);
+  color: var(--muted);
   display: flex;
   font-family: var(--font-mono);
   font-size: 10px;
   gap: 4px;
   margin-bottom: 5px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+
+  a {
+    align-items: center;
+    color: var(--accent);
+    display: inline-flex;
+    font-size: 12px;
+    gap: 5px;
+    text-underline-offset: 4px;
+  }
+}
+
+.links a:focus-visible,
+.arrow:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .name {
@@ -188,7 +231,10 @@
 }
 
 @include down("desktop") {
-  .grid,
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .featured {
     grid-template-columns: 1fr;
   }
@@ -199,6 +245,10 @@
 }
 
 @include down("mobile") {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
   .featured {
     padding: 28px 24px;
   }

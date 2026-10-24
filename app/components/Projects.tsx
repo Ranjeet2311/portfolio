@@ -1,4 +1,5 @@
 import type { FeaturedProject, ProjectItem } from "../types/portfolio";
+import Link from "next/link";
 import { Icon } from "./ui/Icon";
 import { Pills } from "./ui/Pills";
 import styles from "./Projects.module.scss";
@@ -6,22 +7,45 @@ import styles from "./Projects.module.scss";
 export type ProjectsProps = {
   featured: FeaturedProject;
   projects: ProjectItem[];
+  archive?: boolean;
 };
 
-export function Projects({ featured, projects }: ProjectsProps) {
+export function Projects({
+  featured,
+  projects,
+  archive = false,
+}: ProjectsProps) {
+  const displayedProjects = archive ? projects : projects.slice(0, 5);
+  const reveal = archive ? "" : "reveal";
+  const Heading = archive ? "h1" : "h2";
   return (
     <section className="section tinted" id="projects">
-      <div className="eyebrow reveal">04 - Client work & projects</div>
-      <h2 className="sectionHeading reveal reveal-delay-1">
-        Things I&apos;ve <i>built</i> - for clients and myself
-      </h2>
-      <div className={`${styles.sub} reveal reveal-delay-2`}>
+      <div className={`eyebrow ${reveal}`}>
+        {archive ? "Project archive" : "04 - Selected work"}
+      </div>
+      <Heading className={`sectionHeading ${reveal} reveal-delay-1`}>
+        {archive ? (
+          <>
+            All my <i>projects</i>
+          </>
+        ) : (
+          <>
+            Projects I&apos;ve <i>built and contributed to</i>
+          </>
+        )}
+      </Heading>
+      {archive && (
+        <p className={styles.sub}>
+          {projects.length + 1} projects across client work and personal builds.
+        </p>
+      )}
+      <div className={`${styles.sub} ${reveal} reveal-delay-2`}>
         <Icon name="ti-lock" />
-        Some client work is covered by NDA, shared here at a level clients are comfortable with.
+        Selected professional work is described without client names or public demos.
       </div>
 
       <div className={styles.grid}>
-        <article className={`${styles.featured} reveal`}>
+        <article className={`${styles.featured} ${reveal}`}>
           <div>
             <div className={styles.featuredTag}>
               <Icon name="ti-star" />
@@ -37,19 +61,26 @@ export function Projects({ featured, projects }: ProjectsProps) {
           </div>
         </article>
 
-        {projects.map((project, index) => (
-          <a
-            className={`${styles.card} reveal reveal-delay-${Math.min(index + 1, 4)}`}
-            href={project.href}
+        {displayedProjects.map((project, index) => (
+          <article
+            className={`${styles.card} ${reveal} reveal-delay-${Math.min(index + 1, 4)}`}
             key={project.name}
           >
             <div className={styles.cardTop}>
               <div className={styles.icon}>
                 <Icon name={project.icon} />
               </div>
-              <div className={styles.arrow}>
-                <Icon name="ti-arrow-up-right" />
-              </div>
+              {project.href && (
+                <a
+                  className={styles.arrow}
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${project.name} demo in a new tab`}
+                >
+                  <Icon name="ti-arrow-up-right" />
+                </a>
+              )}
             </div>
             <div className={styles.type}>
               <Icon name="ti-tag" />
@@ -62,9 +93,36 @@ export function Projects({ featured, projects }: ProjectsProps) {
               {project.note}
             </div>
             <Pills items={project.tags} mutedFrom={1} />
-          </a>
+            {project.href && (
+              <div className={styles.links}>
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${project.name} live demo (opens in a new tab)`}
+                >
+                  <Icon name="ti-external-link" /> Live demo
+                </a>
+                {project.code && <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${project.name} source code (opens in a new tab)`}
+                >
+                  <Icon name="ti-brand-github" /> Source code
+                </a>}
+              </div>
+            )}
+          </article>
         ))}
       </div>
+      {!archive && projects.length > displayedProjects.length && (
+        <div className={styles.viewMore}>
+          <Link href="/projects">
+            View all projects <Icon name="ti-arrow-right" />
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

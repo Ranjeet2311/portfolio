@@ -7,6 +7,7 @@ export type ContactProps = {
 };
 
 export function Contact({ links }: ContactProps) {
+  const email = links.find((link) => link.icon === "ti-mail");
   return (
     <section className={styles.section} id="contact">
       <div className={styles.grid}>
@@ -16,16 +17,17 @@ export function Contact({ links }: ContactProps) {
             Let&apos;s build something <i>great</i> together
           </h2>
           <p className={styles.sub}>
-            Open to senior full-stack roles, technical lead positions, and long-term freelance
-            collaborations. Based in Ljubljana, working remotely across Europe.
+            Open to senior full-stack roles, technical lead positions, and freelance projects:
+            new applications, bug fixes, extra features, and small business websites.
+            Based in Ljubljana, working remotely across Europe.
           </p>
           <div className={styles.hint}>
             <Icon name="ti-info-circle" />
-            Clicking below opens your email client: <span>ranjeet@example.com</span>
+            Clicking below opens your email client: <span>{email?.value}</span>
           </div>
           <a
             className={styles.button}
-            href="mailto:ranjeet@example.com?subject=Let's work together&body=Hi Ranjeet,%0D%0A%0D%0AI came across your portfolio and would love to connect."
+            href={email?.href}
           >
             <Icon name="ti-mail" />
             Send me a message

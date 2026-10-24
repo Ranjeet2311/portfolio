@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { BlogPost } from "../types/portfolio";
 import { Icon } from "./ui/Icon";
 import styles from "./Blog.module.scss";
@@ -16,13 +17,13 @@ export function Blog({ posts }: BlogProps) {
         Thoughts on <i>engineering</i> & craft
       </h2>
       <p className="sectionSub reveal reveal-delay-2">
-        Long-form notes on architecture decisions, frontend patterns, and lessons learned building
-        production systems.
+        Writing on state management, static websites, and Cloudflare databases.
+        Article previews are below; the originals are published on LinkedIn.
       </p>
 
       <div className={styles.grid}>
         {featured ? (
-          <a className={`${styles.featured} reveal`} href={featured.href}>
+          <Link className={`${styles.featured} reveal`} href={featured.href}>
             <div className={styles.featuredImage}>
               <Icon name={featured.icon} />
             </div>
@@ -38,10 +39,10 @@ export function Blog({ posts }: BlogProps) {
                   <Icon name="ti-calendar" />
                   {featured.date}
                 </span>
-                <span>
+                {featured.readTime && <span>
                   <Icon name="ti-clock" />
                   {featured.readTime}
-                </span>
+                </span>}
                 {featured.category ? (
                   <span>
                     <Icon name="ti-tag" />
@@ -50,14 +51,14 @@ export function Blog({ posts }: BlogProps) {
                 ) : null}
               </div>
               <div className={styles.read}>
-                Read article <Icon name="ti-arrow-right" />
+                View article preview <Icon name="ti-arrow-right" />
               </div>
             </div>
-          </a>
+          </Link>
         ) : null}
 
         {regularPosts.map((post, index) => (
-          <a
+          <Link
             className={`${styles.card} reveal reveal-delay-${Math.min(index + 1, 4)}`}
             href={post.href}
             key={`${post.tag}-${post.date}`}
@@ -77,21 +78,21 @@ export function Blog({ posts }: BlogProps) {
                   <Icon name="ti-calendar" />
                   {post.date}
                 </span>
-                <span>
+                {post.readTime && <span>
                   <Icon name="ti-clock" />
                   {post.readTime}
-                </span>
+                </span>}
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
 
       <div className={`${styles.cta} reveal`}>
-        <a className="button ghostButton" href="#">
+        <Link className="button ghostButton" href="/articles">
           <Icon name="ti-pencil" />
           View all articles
-        </a>
+        </Link>
       </div>
     </section>
   );

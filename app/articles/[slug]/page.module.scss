@@ -1,0 +1,34 @@
+@use "../../styles/responsive" as *;
+
+.page { background:var(--surface); min-height:100vh; }
+.header { align-items:center; background:var(--nav-background); border-bottom:.5px solid var(--line); display:flex; justify-content:space-between; padding:20px 52px; }
+.brand,.navLink { align-items:center; color:var(--ink); display:inline-flex; gap:7px; text-decoration:none; }
+.brand { font-family:var(--font-mono); font-size:13px; font-weight:700; }
+.brand i,.brand em { color:var(--accent); font-style:normal; }.brand i{font-size:17px}
+.navigation { align-items:center; display:flex; gap:18px; }
+.navLink { color:var(--mid); font-size:12px; font-weight:700; transition:color .2s; }.navLink:hover{color:var(--accent)}
+.disabled { cursor:not-allowed; opacity:.38; }.disabled:hover{color:var(--mid)}
+
+.articleHeader { background:radial-gradient(circle at 82% 20%,var(--image-glow),transparent 30%),linear-gradient(145deg,var(--dark),var(--dark-2)); color:var(--white); padding:88px max(52px,calc((100vw - 1060px)/2)) 92px; }
+.category { align-items:center; color:var(--accent-3); display:flex; font-family:var(--font-mono); font-size:10px; gap:7px; letter-spacing:.1em; text-transform:uppercase; }
+.articleHeader h1 { font-family:var(--font-display); font-size:clamp(42px,6vw,72px); font-weight:400; line-height:1.02; margin:18px 0 24px; max-width:900px; }
+.articleHeader h1 i { color:var(--accent-3); font-style:italic; }
+.lede { color:var(--dark-copy); font-size:16px; line-height:1.8; max-width:720px; }
+.meta { display:flex; flex-wrap:wrap; gap:12px 22px; margin-top:30px; }
+.meta span { align-items:center; color:var(--dark-muted); display:flex; font-family:var(--font-mono); font-size:10px; gap:6px; }.meta i{color:var(--accent-3);font-size:13px}
+
+.articleLayout { display:grid; gap:64px; grid-template-columns:210px minmax(0,700px); justify-content:center; padding:80px 52px 110px; }
+.aside { align-self:start; border-left:2px solid var(--line); padding-left:18px; position:sticky; top:28px; }
+.aside>span { color:var(--ink); font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.aside ol { display:flex; flex-direction:column; gap:12px; list-style:none; margin-top:16px; }.aside a{color:var(--muted);font-size:11px;line-height:1.45;text-decoration:none}.aside a:hover{color:var(--accent)}
+.content { color:var(--ink); }.content section{scroll-margin-top:32px}.content section+section{border-top:.5px solid var(--line);margin-top:52px;padding-top:52px}
+.content h2 { font-family:var(--font-display); font-size:34px; font-weight:400; line-height:1.15; margin-bottom:20px; }
+.content p { color:var(--mid); font-size:15px; line-height:1.9; margin-bottom:20px; }
+.content ul { background:var(--white); border:.5px solid var(--line); border-radius:var(--radius-sm); display:flex; flex-direction:column; gap:12px; list-style:none; margin:28px 0; padding:24px 26px; }
+.content li { color:var(--ink-2); font-size:13px; line-height:1.6; padding-left:18px; position:relative; }.content li:before{background:var(--accent-3);border-radius:50%;content:"";height:6px;left:0;position:absolute;top:.65em;width:6px}
+.articleEnd { align-items:center; border-top:.5px solid var(--line); display:flex; justify-content:space-between; margin-top:60px; padding-top:28px; }
+.articleEnd>span{color:var(--muted);font-family:var(--font-mono);font-size:10px}.articleEnd a{align-items:center;color:var(--accent);display:flex;font-size:12px;font-weight:700;gap:7px;text-decoration:none}
+.footer { align-items:center; background:var(--footer-bg); border-top:1px solid var(--footer-line); color:var(--footer-text); display:flex; font-size:11px; justify-content:space-between; padding:22px 52px; }.footer a{color:inherit;text-decoration:none}
+
+@include down("desktop") { .articleLayout{grid-template-columns:minmax(0,700px)}.aside{display:none} }
+@include down("mobile") { .header,.footer{padding-left:24px;padding-right:24px}.navigation{gap:10px}.navLink{font-size:0}.navLink i{font-size:18px}.articleHeader{padding:70px 24px 74px}.articleLayout{padding:58px 24px 80px}.articleEnd{align-items:flex-start;flex-direction:column;gap:14px} }

@@ -1,0 +1,27 @@
+.header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 24px clamp(24px, 6vw, 80px);
+
+  a {
+    align-items: center;
+    color: var(--accent);
+    display: inline-flex;
+    font-size: 13px;
+    gap: 6px;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+    &:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  }
+
+  .brand {
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
