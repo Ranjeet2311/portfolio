@@ -21,7 +21,7 @@
   color: white;
   display: flex;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-small);
   gap: 36px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -30,6 +30,6 @@
   &::after {
     color: var(--accent-2);
     content: "*";
-    font-size: 10px;
+    font-size: var(--text-small);
   }
 }

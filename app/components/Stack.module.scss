@@ -35,7 +35,7 @@
   h3 {
     color: var(--muted);
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: var(--text-small);
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
@@ -51,13 +51,13 @@
   align-items: center;
   color: var(--mid);
   display: flex;
-  font-size: 12.5px;
+  font-size: var(--text-body);
   gap: 9px;
 
   i {
     color: var(--line);
     flex-shrink: 0;
-    font-size: 12px;
+    font-size: var(--text-small);
   }
 }
 

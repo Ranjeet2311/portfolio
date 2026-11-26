@@ -25,7 +25,7 @@
 
 .brand {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--text-body);
   font-weight: 700;
 
   i {
@@ -41,7 +41,7 @@
 
 .back {
   color: var(--mid);
-  font-size: 12px;
+  font-size: var(--text-small);
   font-weight: 700;
   transition: color 0.2s;
 
@@ -73,7 +73,7 @@
 
   p {
     color: var(--dark-copy);
-    font-size: 15px;
+    font-size: var(--text-body);
     line-height: 1.8;
     max-width: 650px;
   }
@@ -99,7 +99,7 @@
   span {
     color: var(--muted);
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: var(--text-small);
     text-transform: uppercase;
   }
 }
@@ -179,7 +179,7 @@
     bottom: 14px;
     color: var(--dark-muted);
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: var(--text-small);
     left: 16px;
     position: absolute;
     z-index: 1;
@@ -206,7 +206,7 @@
   > p {
     color: var(--mid);
     flex: 1;
-    font-size: 12.5px;
+    font-size: var(--text-body);
     line-height: 1.7;
     margin-bottom: 22px;
   }
@@ -217,7 +217,7 @@
   color: var(--accent);
   display: flex;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: var(--text-small);
   gap: 5px;
   letter-spacing: 0.1em;
   margin-bottom: 12px;
@@ -236,13 +236,13 @@
     color: var(--muted);
     display: flex;
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: var(--text-small);
     gap: 5px;
   }
 
   i {
     color: var(--accent-3);
-    font-size: 12px;
+    font-size: var(--text-small);
   }
 }
 
@@ -252,7 +252,7 @@
   border-top: 1px solid var(--footer-line);
   color: var(--footer-text);
   display: flex;
-  font-size: 11px;
+  font-size: var(--text-small);
   justify-content: space-between;
   padding: 22px 52px;
 

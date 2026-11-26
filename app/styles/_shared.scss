@@ -22,7 +22,7 @@
   color: var(--accent-3);
   display: flex;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-small);
   gap: 9px;
   letter-spacing: 0.14em;
   margin-bottom: 12px;
@@ -51,7 +51,7 @@
 
 .sectionSub {
   color: var(--mid);
-  font-size: 13.5px;
+  font-size: var(--text-body);
   line-height: 1.75;
   margin-bottom: 40px;
   max-width: 620px;
@@ -62,7 +62,7 @@
   border-radius: 100px;
   cursor: pointer;
   display: inline-flex;
-  font-size: 12px;
+  font-size: var(--text-small);
   font-weight: 700;
   gap: 7px;
   padding: 12px 22px;
@@ -70,7 +70,7 @@
   transition: all 0.2s var(--ease);
 
   i {
-    font-size: 15px;
+    font-size: var(--text-body);
   }
 }
 
@@ -110,7 +110,7 @@
   border-radius: 100px;
   color: var(--accent);
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-small);
   padding: 3px 9px;
 }
 

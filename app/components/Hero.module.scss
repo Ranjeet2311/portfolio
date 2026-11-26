@@ -3,7 +3,7 @@
 .hero {
   border-bottom: 0.5px solid var(--line);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   padding-top: 62px;
 }
 
@@ -27,7 +27,7 @@
   color: var(--accent);
   display: inline-flex;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-small);
   font-weight: 600;
   gap: 7px;
   margin-bottom: 24px;
@@ -49,7 +49,7 @@
   color: var(--accent-3);
   display: flex;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-small);
   gap: 10px;
   letter-spacing: 0.14em;
   margin-bottom: 20px;
@@ -80,7 +80,7 @@
 .bio {
   animation: fade-slide-up 0.7s var(--ease) 0.4s both;
   color: var(--mid);
-  font-size: 14px;
+  font-size: var(--text-body);
   line-height: 1.82;
   margin-bottom: 36px;
   max-width: 430px;
@@ -109,7 +109,7 @@
   i {
     color: var(--accent-3);
     display: block;
-    font-size: 15px;
+    font-size: var(--text-body);
     margin-bottom: 5px;
   }
 }
@@ -122,14 +122,14 @@
 
   sup {
     color: var(--accent);
-    font-size: 13px;
+    font-size: var(--text-body);
   }
 }
 
 .statLabel {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: var(--text-small);
   letter-spacing: 0.06em;
   margin-top: 4px;
   text-transform: uppercase;
@@ -138,12 +138,14 @@
 .buttons {
   animation: fade-slide-up 0.7s var(--ease) 0.6s both;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
 .right {
+  min-width: 0;
   animation: fade-in 1s var(--ease) 0.4s both;
-  background: var(--dark);
+  // background: var(--dark);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -193,21 +195,42 @@
 .termTitle,
 .comment,
 .prompt {
-  color: var(--code-muted);
+  color: var(--dark-copy);
 }
 
 .termTitle {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-small);
   margin-left: 10px;
 }
 
 .termBody {
   background: var(--dark-3);
+  color: var(--code-text);
   font-family: var(--font-mono);
-  font-size: 11.5px;
-  line-height: 2;
+  font-size: var(--text-small);
+  line-height: 1.8;
+  overflow-wrap: anywhere;
   padding: 22px 24px;
+}
+
+.codeBlock {
+  margin: 1em 0;
+}
+
+.codeProperties {
+  padding-left: 1.25em;
+}
+
+.stackItems {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.6em;
+  padding-left: 1.25em;
+}
+
+.stackItem {
+  white-space: nowrap;
 }
 
 .keyword {
@@ -251,13 +274,13 @@
 
   i {
     color: var(--accent-3);
-    font-size: 14px;
+    font-size: var(--text-body);
   }
 
   span {
-    color: var(--code-muted);
+    color: var(--dark-copy);
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: var(--text-small);
   }
 
   b {
@@ -283,6 +306,10 @@
 
   .right {
     padding: 36px 24px;
+  }
+
+  .termBody {
+    padding: 20px 16px;
   }
 
   .stats {

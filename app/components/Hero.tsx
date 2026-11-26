@@ -17,11 +17,7 @@ export function Hero({ stats }: HeroProps) {
           </div>
           <div className={styles.tag}>Senior Full Stack Engineer</div>
           <h1 className={styles.heading}>
-            Crafting web apps
-            <br />
-            that <i>scale</i>
-            <br />
-            and <i>last</i>
+            Crafting web apps that <br /> <i>scale</i> and <i>last</i>
           </h1>
           <p className={styles.bio}>
             Full-stack engineer based in Ljubljana, with 10+ years building
@@ -32,7 +28,7 @@ export function Hero({ stats }: HeroProps) {
         </div>
 
         <div>
-          <div className={styles.stats}>
+          {/* <div className={styles.stats}>
             {stats.map((stat) => (
               <div className={styles.stat} key={stat.label}>
                 <Icon name={stat.icon} />
@@ -43,11 +39,19 @@ export function Hero({ stats }: HeroProps) {
                 <div className={styles.statLabel}>{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
           <div className={styles.buttons}>
             <a className="button primaryButton" href="#projects">
               <Icon name="ti-arrow-right" />
               View my work
+            </a>
+            <a
+              className="button ghostButton"
+              href="/Ranjeet-Kumar-CV.pdf"
+              download
+            >
+              <Icon name="ti-download" />
+              Download CV
             </a>
             <a className="button ghostButton" href="#contact">
               <Icon name="ti-mail" />
@@ -66,56 +70,78 @@ export function Hero({ stats }: HeroProps) {
             <span className={styles.termTitle}>ranjeet ~ zsh</span>
           </div>
           <div className={styles.termBody}>
-            <span className={styles.comment}>
-              // senior full stack engineer
-            </span>
-            <br />
-            <br />
-            <span className={styles.keyword}>const</span>{" "}
-            <span className={styles.white}>profile</span> = {"{"}
-            <br />
-            &nbsp;&nbsp;<span className={styles.keyword}>name</span>:{" "}
-            <span className={styles.string}>"Ranjeet"</span>,
-            <br />
-            &nbsp;&nbsp;<span className={styles.keyword}>role</span>:{" "}
-            <span className={styles.string}>"Senior Full Stack Engineer"</span>,
-            <br />
-            &nbsp;&nbsp;<span className={styles.keyword}>location</span>:{" "}
-            <span className={styles.string}>"Ljubljana, Slovenia"</span>,
-            <br />
-            &nbsp;&nbsp;<span className={styles.keyword}>experience</span>:{" "}
-            <span className={styles.number}>10</span>,{" "}
-            <span className={styles.comment}>// years</span>
-            <br />
-            &nbsp;&nbsp;<span className={styles.keyword}>stack</span>: [
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <span className={styles.string}>"Next.js"</span>,{" "}
-            <span className={styles.string}>"Angular"</span>,{" "}
-            <span className={styles.string}>"Django"</span>,
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <span className={styles.string}>"TypeScript"</span>,{" "}
-            <span className={styles.string}>"Docker"</span>
-            <br />
-            &nbsp;&nbsp;],
-            <br />
-            &nbsp;&nbsp;<span className={styles.keyword}>openToWork</span>:{" "}
-            <span className={styles.boolean}>true</span>
-            <br />
-            {"};"}
-            <br />
-            <br />
-            <span className={styles.prompt}>▸</span>{" "}
-            <span className={styles.string}>Ready to ship.</span>
-            <span className={styles.cursor} />
+            <div className={styles.comment}>// senior full stack engineer</div>
+            <div className={styles.codeBlock}>
+              <div>
+                <span className={styles.keyword}>const</span>{" "}
+                <span className={styles.white}>profile</span> = {"{"}
+              </div>
+              <div className={styles.codeProperties}>
+                <div>
+                  <span className={styles.keyword}>name</span>:{" "}
+                  <span className={styles.string}>"Ranjeet"</span>,
+                </div>
+                <div>
+                  <span className={styles.keyword}>role</span>:{" "}
+                  <span className={styles.string}>
+                    "Senior Full Stack Engineer"
+                  </span>
+                  ,
+                </div>
+                <div>
+                  <span className={styles.keyword}>location</span>:{" "}
+                  <span className={styles.string}>"Ljubljana, Slovenia"</span>,
+                </div>
+                <div>
+                  <span className={styles.keyword}>experience</span>:{" "}
+                  <span className={styles.number}>10</span>,{" "}
+                  <span className={styles.comment}>// years</span>
+                </div>
+                <div>
+                  <span className={styles.keyword}>stack</span>: [
+                </div>
+                <div className={styles.stackItems}>
+                  {[
+                    "Next.js",
+                    "Angular",
+                    "Vue",
+                    "React",
+                    "TypeScript",
+                    "Node.js",
+                    "Express",
+                    "Docker",
+                    "MongoDB",
+                    "SQL",
+                    "CI/CD",
+                  ].map((technology, index, technologies) => (
+                    <span className={styles.stackItem} key={technology}>
+                      <span className={styles.string}>"{technology}"</span>
+                      {index < technologies.length - 1 ? "," : ""}
+                    </span>
+                  ))}
+                </div>
+                <div>],</div>
+                <div>
+                  <span className={styles.keyword}>openToWork</span>:{" "}
+                  <span className={styles.boolean}>true</span>
+                </div>
+              </div>
+              <div>{"};"}</div>
+            </div>
+            <div>
+              <span className={styles.prompt} aria-hidden="true">
+                &#x276F;
+              </span>{" "}
+              <span className={styles.string}>Ready to ship.</span>
+              <span className={styles.cursor} aria-hidden="true" />
+            </div>
           </div>
         </div>
 
         <div className={styles.location}>
           <Icon name="ti-map-pin" />
           <span>
-            Ljubljana, Slovenia / Available remotely across <b>Europe</b>
+            Ljubljana, Slovenia / available across <b>Europe</b>
           </span>
         </div>
       </div>

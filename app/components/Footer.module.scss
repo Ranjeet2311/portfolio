@@ -14,12 +14,12 @@
   color: var(--footer-text);
   display: flex;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-small);
   gap: 8px;
 
   i {
     color: var(--footer-icon);
-    font-size: 13px;
+    font-size: var(--text-body);
   }
 
   em {
@@ -37,7 +37,7 @@
     color: var(--footer-text);
     display: flex;
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: var(--text-small);
     gap: 4px;
     text-decoration: none;
     transition: color 0.2s;

@@ -4,7 +4,7 @@ import type {
   NavItem,
   StackGroup,
   StatItem,
-  StrengthItem
+  StrengthItem,
 } from "../types/portfolio";
 
 export const navItems: NavItem[] = [
@@ -13,47 +13,53 @@ export const navItems: NavItem[] = [
   { label: "Experience", href: "#experience", icon: "ti-briefcase" },
   { label: "Projects", href: "#projects", icon: "ti-folder" },
   { label: "Blog", href: "#blog", icon: "ti-pencil" },
-  { label: "Contact", href: "#contact", icon: "ti-mail" }
+  { label: "Contact", href: "#contact", icon: "ti-mail" },
 ];
 
 export const stats: StatItem[] = [
   { icon: "ti-calendar", value: "10", suffix: "+", label: "Years" },
   { icon: "ti-rocket", value: "30", suffix: "+", label: "Projects" },
   { icon: "ti-language", value: "3", label: "Help centre languages" },
-  { icon: "ti-layers-subtract", value: "6", suffix: "+", label: "Stacks" }
+  { icon: "ti-layers-subtract", value: "6", suffix: "+", label: "Stacks" },
 ];
 
 export const strengths: StrengthItem[] = [
   {
     icon: "ti-topology-star-3",
     title: "System design",
-    description: "Frontend architecture, tenant-aware access, and maintainable application boundaries"
+    description:
+      "Define application boundaries and weigh trade-offs around access, state, and maintainability",
   },
   {
     icon: "ti-layers-subtract",
-    title: "Full-stack ownership",
-    description: "End-to-end delivery across API, frontend, DevOps, and production"
+    title: "Problem decomposition",
+    description:
+      "Turn complex requirements into clear decisions and manageable implementation steps",
   },
   {
     icon: "ti-device-desktop-code",
-    title: "Frontend expertise",
-    description: "Next.js, Angular, React, Vue, accessible UI, and SEO-friendly delivery"
+    title: "Reliable user flows",
+    description:
+      "Work through loading states, validation, and failure cases so users can complete their tasks",
   },
   {
     icon: "ti-database",
-    title: "Data-layer fluency",
-    description: "SQL, MongoDB, Firebase, schema design, and optimization"
+    title: "Data and access",
+    description:
+      "Connect data models, authentication, and permissions to the rules of the product",
   },
   {
     icon: "ti-users",
     title: "Team collaboration",
-    description: "Code reviews, cross-functional delivery, and clear communication"
+    description:
+      "Clarify requirements, explain technical decisions, and work through feedback with the team",
   },
   {
     icon: "ti-rocket",
-    title: "Shipping velocity",
-    description: "Built a full-stack patient recovery app in seven days of development"
-  }
+    title: "End-to-end ownership",
+    description:
+      "Follow solutions through implementation, testing, deployment, and production support",
+  },
 ];
 
 export const stackGroups: StackGroup[] = [
@@ -62,17 +68,17 @@ export const stackGroups: StackGroup[] = [
     label: "Frontend",
     items: [
       { label: "Next.js", level: "high" },
-      { label: "Angular", level: "high" },
       { label: "React", level: "high" },
-      { label: "Vue.js", level: "high" },
       { label: "TypeScript", level: "medium" },
-      { label: "Tailwind CSS", level: "medium" },
-      { label: "Bootstrap", level: "medium" },
+      { label: "Angular", level: "high" },
+      { label: "Vue.js", level: "high" },
       { label: "Redux Toolkit / RTK Query" },
       { label: "Zustand" },
+      { label: "Tailwind CSS", level: "medium" },
+      { label: "Bootstrap", level: "medium" },
       { label: "Material UI" },
-      { label: "Hugo / Sass" }
-    ]
+      { label: "Hugo / Sass" },
+    ],
   },
   {
     icon: "ti-server",
@@ -83,9 +89,9 @@ export const stackGroups: StackGroup[] = [
       { label: "TypeScript", level: "high" },
       { label: "REST APIs", level: "medium" },
       { label: "OAuth 2.0 / OIDC / RBAC", level: "medium" },
-      { label: "GraphQL" },
-      { label: "Backend-for-Frontend / PKCE" }
-    ]
+      // { label: "GraphQL" },
+      // { label: "Backend-for-Frontend / PKCE" },
+    ],
   },
   {
     icon: "ti-database",
@@ -96,8 +102,8 @@ export const stackGroups: StackGroup[] = [
       { label: "SQL / PostgreSQL", level: "high" },
       { label: "Firebase", level: "medium" },
       { label: "Cloudflare D1 / Kysely" },
-      { label: "Redis" }
-    ]
+      { label: "Redis" },
+    ],
   },
   {
     icon: "ti-settings",
@@ -109,12 +115,12 @@ export const stackGroups: StackGroup[] = [
       { label: "Netlify / Vercel", level: "medium" },
       { label: "Linux / Bash" },
       { label: "Cloudflare Workers / OpenNext" },
-      { label: "Durable Objects" },
+      // { label: "Durable Objects" },
       { label: "Vitest / Storybook" },
       { label: "WordPress" },
-      { label: "Figma" }
-    ]
-  }
+      { label: "Figma" },
+    ],
+  },
 ];
 
 export const experience: ExperienceItem[] = [
@@ -126,8 +132,7 @@ export const experience: ExperienceItem[] = [
     company: "Gospodar zdravja d.o.o. | Soamed",
     dates: "May 2025 - present · Ljubljana",
     companyIcon: "ti-building",
-    note:
-      "Own the frontend architecture of a multi-tenant SaaS platform, including authentication, organization switching, roles, and plan-based features. Built a full-stack patient recovery app, a booking frontend, and a multilingual help centre; created and manage project repositories and handle releases.",
+    note: "Own the frontend architecture of a multi-tenant SaaS platform, including authentication, organization switching, roles, and plan-based features. Built a full-stack patient recovery app, a booking frontend, and a multilingual help centre; created and manage project repositories and handle releases.",
     tags: [
       "Multi-tenant SaaS",
       "Authentication layer",
@@ -138,8 +143,8 @@ export const experience: ExperienceItem[] = [
       "Online booking",
       "Next.js",
       "TypeScript",
-      "Cloudflare Workers"
-    ]
+      "Cloudflare Workers",
+    ],
   },
   {
     period: "2023 - now",
@@ -149,8 +154,7 @@ export const experience: ExperienceItem[] = [
     company: "Independent",
     dates: "Dec 2023 - present · Ljubljana",
     companyIcon: "ti-briefcase",
-    note:
-      "New web apps, bug fixes, additional features, and small business websites. I work with clients to define the scope and choose a suitable stack, from custom applications to Hugo and WordPress sites.",
+    note: "New web apps, bug fixes, additional features, and small business websites. I work with clients to define the scope and choose a suitable stack, from custom applications to Hugo and WordPress sites.",
     tags: [
       "Full-stack projects",
       "Client discovery",
@@ -159,8 +163,8 @@ export const experience: ExperienceItem[] = [
       "Backend development",
       "Database design",
       "Deployment",
-      "Production support"
-    ]
+      "Production support",
+    ],
   },
   {
     period: "2022 - 2023",
@@ -169,8 +173,7 @@ export const experience: ExperienceItem[] = [
     company: "XLAB",
     dates: "Jun 2022 - Dec 2023 · Ljubljana",
     companyIcon: "ti-building",
-    note:
-      "Built Vue, Angular, and React interfaces in the research team for businesses, public institutions, and European projects. Delivered Hugo website frontends with the design team, improved performance, and deployed approved releases through GitLab CI/CD.",
+    note: "Built Vue, Angular, and React interfaces in the research team for businesses, public institutions, and European projects. Delivered Hugo website frontends with the design team, improved performance, and deployed approved releases through GitLab CI/CD.",
     tags: [
       "Vue",
       "Angular",
@@ -179,8 +182,8 @@ export const experience: ExperienceItem[] = [
       "European projects",
       "Web applications",
       "Reusable components",
-      "Responsive UI"
-    ]
+      "Responsive UI",
+    ],
   },
   {
     period: "2015 - 2021",
@@ -189,8 +192,7 @@ export const experience: ExperienceItem[] = [
     company: "Soft Smart Services",
     dates: "Aug 2015 - Dec 2021",
     companyIcon: "ti-building",
-    note:
-      "Independent contractor building websites, online stores, and web apps, mostly for clients in India and the USA. Worked directly with clients from requirements to launch, including hosting, SEO, and Google Analytics.",
+    note: "Independent contractor building websites, online stores, and web apps, mostly for clients in India and the USA. Worked directly with clients from requirements to launch, including hosting, SEO, and Google Analytics.",
     tags: [
       "Client websites",
       "Web applications",
@@ -199,8 +201,8 @@ export const experience: ExperienceItem[] = [
       "Backend",
       "Database",
       "Launch",
-      "Global clients"
-    ]
+      "Global clients",
+    ],
   },
   {
     period: "2014 - 2015",
@@ -209,8 +211,7 @@ export const experience: ExperienceItem[] = [
     company: "IN Technologies (P) Ltd",
     dates: "Mar 2014 - Jun 2015 · Gurugram, India",
     companyIcon: "ti-building",
-    note:
-      "Software troubleshooting for clients in the US, Canada and the UK.",
+    note: "Software troubleshooting for clients in the US, Canada and the UK.",
     tags: [
       "Software support",
       "Troubleshooting",
@@ -218,9 +219,9 @@ export const experience: ExperienceItem[] = [
       "Client communication",
       "US clients",
       "Canadian clients",
-      "UK clients"
-    ]
-  }
+      "UK clients",
+    ],
+  },
 ];
 
 export const marqueeItems = [
@@ -237,7 +238,7 @@ export const marqueeItems = [
   "Docker",
   "GitLab",
   "Tailwind",
-  "OAuth 2.0"
+  "OAuth 2.0",
 ];
 
 export const contactLinks: ContactLink[] = [
@@ -245,23 +246,23 @@ export const contactLinks: ContactLink[] = [
     href: "mailto:ranjeetkumar2311@gmail.com",
     icon: "ti-mail",
     label: "Email - opens your mail app",
-    value: "ranjeetkumar2311@gmail.com"
+    value: "ranjeetkumar2311@gmail.com",
   },
   {
     href: "https://www.linkedin.com/in/ranjeet-dev/",
     icon: "ti-brand-linkedin",
     label: "LinkedIn",
-    value: "linkedin.com/in/ranjeet-dev"
+    value: "linkedin.com/in/ranjeet-dev",
   },
   {
     href: "https://github.com/ranjeet2311",
     icon: "ti-brand-github",
     label: "GitHub",
-    value: "github.com/ranjeet2311"
+    value: "github.com/ranjeet2311",
   },
   {
     icon: "ti-map-pin",
     label: "Location",
-    value: "Ljubljana, Slovenia / EU"
-  }
+    value: "Ljubljana, Slovenia / EU",
+  },
 ];

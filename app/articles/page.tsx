@@ -7,7 +7,7 @@ import styles from "./page.module.scss";
 export const metadata: Metadata = {
   title: "Articles | Ranjeet Kumar",
   description:
-    "Article previews on state management, Hugo, Prisma, Kysely, and Cloudflare D1, with links to Ranjeet Kumar's LinkedIn writing.",
+    "Ideas, lessons, and practical insights on software development and engineering craft by Ranjeet Kumar.",
 };
 
 export default function ArticlesPage() {
@@ -30,8 +30,8 @@ export default function ArticlesPage() {
           Notes on <i>engineering</i> and craft
         </h1>
         <p>
-          Writing on state management, Hugo, and Cloudflare D1. Browse the previews here
-          and find the original articles in my LinkedIn writing collection.
+          Ideas, lessons, and practical insights from building software.
+          Exploring the decisions, tools, and habits behind better engineering.
         </p>
       </section>
 

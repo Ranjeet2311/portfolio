@@ -15,7 +15,7 @@ export function Projects({
   projects,
   archive = false,
 }: ProjectsProps) {
-  const displayedProjects = archive ? projects : projects.slice(0, 5);
+  const displayedProjects = archive ? projects : projects.slice(0, 3);
   const reveal = archive ? "" : "reveal";
   const Heading = archive ? "h1" : "h2";
   return (
@@ -41,7 +41,8 @@ export function Projects({
       )}
       <div className={`${styles.sub} ${reveal} reveal-delay-2`}>
         <Icon name="ti-lock" />
-        Selected professional work is described without client names or public demos.
+        Selected professional work is described without client names or public
+        demos.
       </div>
 
       <div className={styles.grid}>
@@ -103,14 +104,16 @@ export function Projects({
                 >
                   <Icon name="ti-external-link" /> Live demo
                 </a>
-                {project.code && <a
-                  href={project.code}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${project.name} source code (opens in a new tab)`}
-                >
-                  <Icon name="ti-brand-github" /> Source code
-                </a>}
+                {project.code && (
+                  <a
+                    href={project.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.name} source code (opens in a new tab)`}
+                  >
+                    <Icon name="ti-brand-github" /> Source code
+                  </a>
+                )}
               </div>
             )}
           </article>

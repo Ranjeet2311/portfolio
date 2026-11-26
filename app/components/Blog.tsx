@@ -17,8 +17,8 @@ export function Blog({ posts }: BlogProps) {
         Thoughts on <i>engineering</i> & craft
       </h2>
       <p className="sectionSub reveal reveal-delay-2">
-        Writing on state management, static websites, and Cloudflare databases.
-        Article previews are below; the originals are published on LinkedIn.
+        Ideas, lessons, and practical insights from building software.
+        Exploring the decisions, tools, and habits behind better engineering.
       </p>
 
       <div className={styles.grid}>

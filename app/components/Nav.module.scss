@@ -28,13 +28,31 @@
   color: var(--ink);
   display: flex;
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: var(--text-body);
   gap: 9px;
+  flex-shrink: 0;
   text-decoration: none;
 
   &:hover .logoDot {
     transform: scale(1.5);
   }
+}
+
+.logoPortrait {
+  position: relative;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+}
+
+.logoImage {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
 }
 
 .logoDot {
@@ -43,6 +61,10 @@
   height: 8px;
   transition: transform 0.3s var(--ease);
   width: 8px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 0 2px var(--surface-2);
 }
 
 .links {
@@ -56,7 +78,7 @@
   border-radius: 6px;
   color: var(--muted);
   display: flex;
-  font-size: 11px;
+  font-size: var(--text-small);
   gap: 5px;
   letter-spacing: 0.05em;
   padding: 6px 10px;
@@ -67,7 +89,7 @@
     background 0.2s;
 
   i {
-    font-size: 14px;
+    font-size: var(--text-body);
   }
 
   &:hover,
@@ -84,7 +106,7 @@
   color: var(--accent);
   cursor: pointer;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-small);
   letter-spacing: 0.08em;
   padding: 8px 13px;
   text-transform: uppercase;
@@ -107,7 +129,7 @@
   border-radius: 100px;
   color: var(--white);
   display: flex;
-  font-size: 11px;
+  font-size: var(--text-small);
   font-weight: 700;
   gap: 6px;
   padding: 9px 20px;
@@ -117,7 +139,7 @@
     transform 0.2s;
 
   i {
-    font-size: 14px;
+    font-size: var(--text-body);
   }
 
   &:hover {
@@ -126,7 +148,7 @@
   }
 }
 
-@include down("desktop") {
+@include down("wide") {
   .links {
     display: none;
   }
@@ -140,6 +162,20 @@
 
   .cta {
     display: none;
+  }
+
+  .themeToggle {
+    letter-spacing: 0;
+    padding: 8px 10px;
+  }
+
+  .logoPortrait {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo {
+    gap: 7px;
   }
 }
 

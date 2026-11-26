@@ -11,28 +11,29 @@ export function About({ strengths }: AboutProps) {
     <section className="section white" id="about">
       <div className="eyebrow reveal">01 - About me</div>
       <h2 className="sectionHeading reveal reveal-delay-1">
-        From websites to <i>application architecture</i>
+        Solving real <i>engineering challenges</i>
       </h2>
 
       <div className={styles.grid}>
         <div className="reveal reveal-delay-2">
           <p className={styles.copy}>
-            I started with websites more than ten years ago and moved into web applications.
-            Today I lead the frontend of a multi-tenant SaaS platform at Soamed, making the
-            architecture decisions and building authentication, organization switching, and
-            role-aware interfaces.
+            Over ten years of building software, I&apos;ve learned that the hardest work is
+            understanding the problem, deciding what matters, and making the pieces work
+            together. I turn product requirements into practical technical decisions,
+            with attention to the people using and maintaining the system.
           </p>
           <p className={styles.copy}>
-            My specialty is <strong>frontend architecture, backed by full-stack delivery</strong>.
-            I built a patient recovery app across the interface, API routes, and SQL database.
-            Earlier, I worked in XLAB&apos;s research team on Vue, Angular, and React applications
-            for businesses, public institutions, and European projects.
+            I enjoy working through problems where <strong>user needs, system behaviour,
+            and technical constraints meet</strong>. Whether I&apos;m designing access rules,
+            connecting services, or investigating an unexpected failure, I look beyond
+            the immediate task to understand how a change affects the whole system.
+            I care about making software dependable and easier to work with as it evolves.
           </p>
           <p className={styles.copy}>
-            Alongside my main role, I take on <strong>independent projects of any size</strong>:
-            a new web app, a bug fix, extra features, or a small business website. I work with
-            clients to choose an approach that fits the problem and budget, including Hugo
-            and WordPress when a simpler site is enough.
+            My approach is to <strong>break complex problems into manageable decisions</strong>,
+            weigh the trade-offs, and choose an approach that fits the constraints.
+            I value clear communication, maintainable code, and following the work
+            through testing, release, and production support.
           </p>
         </div>
 

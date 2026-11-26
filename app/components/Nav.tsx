@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { NavItem } from "../types/portfolio";
 import { Icon } from "./ui/Icon";
 import styles from "./Nav.module.scss";
@@ -23,8 +24,18 @@ export function Nav({
       id="nav"
     >
       <a className={styles.logo} href="#hero">
-        <span className={styles.logoDot} />
-        ranjeet.dev
+        <span className={styles.logoPortrait}>
+          <Image
+            src="/images/new-logo.png"
+            alt=""
+            width={38}
+            height={38}
+            priority
+            className={styles.logoImage}
+          />
+          <span className={styles.logoDot} />
+        </span>
+        <span>ranjeet.dev</span>
       </a>
       <div className={styles.links}>
         {items.map((item) => {
