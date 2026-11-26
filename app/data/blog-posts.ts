@@ -9,7 +9,7 @@ export const posts: BlogPost[] = [
     "titleText": "Props, Context, or Store? A Quick Decision Guide",
     "date": "July 22, 2026",
     "tag": "State management",
-    "icon": "ti-layers-subtract",
+    "icon": "layers-subtract",
     "excerpt": "A decision guide to sharing data between components with props, context, or a store.",
     "sourceHref": "https://www.linkedin.com/in/ranjeet-dev/recent-activity/articles/",
     "sections": []
@@ -21,7 +21,7 @@ export const posts: BlogPost[] = [
     "titleText": "A lot of people don't know about HUGO framework",
     "date": "August 29, 2025",
     "tag": "Hugo",
-    "icon": "ti-browser",
+    "icon": "browser",
     "excerpt": "Writing about Hugo after delivering quick, cost-effective websites for clients.",
     "sourceHref": "https://www.linkedin.com/in/ranjeet-dev/recent-activity/articles/",
     "sections": []
@@ -33,7 +33,7 @@ export const posts: BlogPost[] = [
     "titleText": "Prisma vs Kysely on Cloudflare D1: what's good, what's not",
     "date": "August 26, 2025",
     "tag": "Databases",
-    "icon": "ti-database",
+    "icon": "database",
     "excerpt": "Notes from testing Prisma and Kysely for a Next.js application on Cloudflare Workers with D1.",
     "sourceHref": "https://www.linkedin.com/in/ranjeet-dev/recent-activity/articles/",
     "sections": []
@@ -45,7 +45,7 @@ export const posts: BlogPost[] = [
     "titleText": "Cloudflare D1 in Production: Migrations, Defaults, and Rebuilds (Without Tears)",
     "date": "August 25, 2025",
     "tag": "Cloudflare",
-    "icon": "ti-cloud",
+    "icon": "cloud",
     "excerpt": "Lessons on migrations, defaults, and rebuilds from shipping a full-stack Next.js app with Cloudflare D1.",
     "sourceHref": "https://www.linkedin.com/in/ranjeet-dev/recent-activity/articles/",
     "sections": []

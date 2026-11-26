@@ -15,11 +15,11 @@ export default function ArticlesPage() {
     <main className={styles.page}>
       <header className={styles.header}>
         <Link className={styles.brand} href="/">
-          <Icon name="ti-code" />
+          <Icon name="code" />
           ranjeet<em>.dev</em>
         </Link>
         <Link className={styles.back} href="/#blog">
-          <Icon name="ti-arrow-left" />
+          <Icon name="arrow-left" />
           Back to portfolio
         </Link>
       </header>
@@ -50,23 +50,23 @@ export default function ArticlesPage() {
               </div>
               <div className={styles.body}>
                 <div className={styles.tag}>
-                  <Icon name="ti-tag" />
+                  <Icon name="tag" />
                   {post.tag}
                 </div>
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
                 <div className={styles.meta}>
                   <span>
-                    <Icon name="ti-calendar" />
+                    <Icon name="calendar" />
                     {post.date}
                   </span>
                   {post.readTime && <span>
-                    <Icon name="ti-clock" />
+                    <Icon name="clock" />
                     {post.readTime}
                   </span>}
                   {post.category ? (
                     <span>
-                      <Icon name="ti-bookmark" />
+                      <Icon name="bookmark" />
                       {post.category}
                     </span>
                   ) : null}

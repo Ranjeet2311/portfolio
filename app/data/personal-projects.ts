@@ -3,7 +3,7 @@ import type { ProjectItem } from "../types/portfolio";
 export const personalProjects: ProjectItem[] = [
   {
     name: "Job Portal",
-    icon: "ti-briefcase",
+    icon: "briefcase",
     type: "Full-stack / Job platform",
     description:
       "A job search and recruitment platform with employer job management, filtered job searches, secure registration, and personalized dashboards for employers and candidates.",
@@ -14,7 +14,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "Kumar Software",
-    icon: "ti-code",
+    icon: "code",
     type: "Full-stack / In development",
     description:
       "A company website and web application project for Kumar Software, presenting its website and application development services. Currently under construction.",
@@ -25,7 +25,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "Music Wallets",
-    icon: "ti-music",
+    icon: "music",
     type: "Full-stack / Music platform",
     description:
       "A music platform with Firebase authentication, storage, and Firestore-backed content management, built with Vue 3 and the Composition API.",
@@ -36,7 +36,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "Portfolio | React",
-    icon: "ti-user",
+    icon: "user",
     type: "Frontend / Personal portfolio",
     description:
       "My earlier React portfolio, showcasing coding projects with descriptions, technology tags, source repositories, and live demos.",
@@ -47,7 +47,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "Restaurant",
-    icon: "ti-tools-kitchen-2",
+    icon: "tools-kitchen-2",
     type: "Frontend / Food ordering",
     description:
       "A restaurant ordering app for browsing menu items, filtering food categories, viewing product details, and managing a shopping cart with Redux Toolkit.",
@@ -58,7 +58,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "Recipe Share",
-    icon: "ti-chef-hat",
+    icon: "chef-hat",
     type: "Full-stack / Recipe sharing",
     description:
       "A Next.js recipe-sharing platform for browsing meals and publishing recipes, backed by SQL storage with slug generation and XSS protection.",
@@ -69,7 +69,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "Friends Chat",
-    icon: "ti-messages",
+    icon: "messages",
     type: "Full-stack / Group chat",
     description:
       "A real-time group chat application with user authentication and Firestore-backed messaging, built with Vue 3 and Firebase.",
@@ -80,7 +80,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "GitHub Repo Browser",
-    icon: "ti-brand-github",
+    icon: "brand-github",
     type: "Frontend / Developer tool",
     description:
       "An Angular tool for searching, filtering, and exploring GitHub repositories and their details through GraphQL. Requires your own GitHub token to use.",
@@ -91,7 +91,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "Appointment Tracker",
-    icon: "ti-calendar-event",
+    icon: "calendar-event",
     type: "Frontend / Personal organizer",
     description:
       "An Angular appointment and task tracker for creating items, managing due dates and priorities, and keeping track of their status in browser storage.",
@@ -102,7 +102,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "Speech to Text",
-    icon: "ti-microphone",
+    icon: "microphone",
     type: "Frontend / Speech recognition",
     description:
       "A React voice transcription tool that converts spoken words into written text in real time for notes, dictation, and accessibility.",
@@ -113,7 +113,7 @@ export const personalProjects: ProjectItem[] = [
   },
   {
     name: "Simple Counter",
-    icon: "ti-plus",
+    icon: "plus",
     type: "Frontend / Vue practice",
     description:
       "A simple Vue counter with increment, decrement, and reset controls. Counter state lasts for the current session and is not saved to browser storage.",

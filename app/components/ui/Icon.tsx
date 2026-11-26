@@ -1,4 +1,118 @@
-import type { IconName } from "../../types/portfolio";
+import type { IconType } from "react-icons";
+import {
+  FiCornerUpLeft,
+  FiArrowLeft,
+  FiArrowRight,
+  FiArrowUpRight,
+  FiBookOpen,
+  FiBookmark,
+  FiBriefcase,
+  FiGlobe,
+  FiHome,
+  FiCalendar,
+  FiClock,
+  FiCloud,
+  FiCode,
+  FiDatabase,
+  FiMonitor,
+  FiDownload,
+  FiExternalLink,
+  FiFolder,
+  FiHeadphones,
+  FiInfo,
+  FiLayers,
+  FiLayout,
+  FiLock,
+  FiMail,
+  FiMapPin,
+  FiMessageSquare,
+  FiMic,
+  FiMusic,
+  FiEdit3,
+  FiPlus,
+  FiSend,
+  FiServer,
+  FiSettings,
+  FiShield,
+  FiStar,
+  FiSun,
+  FiTag,
+  FiTerminal,
+  FiGitBranch,
+  FiUser,
+  FiUserCheck,
+  FiUsers,
+} from "react-icons/fi";
+import {
+  FaRocket,
+  FaGithub,
+  FaLinkedin,
+  FaUniversity,
+  FaHospital,
+  FaUtensils,
+  FaCircle,
+  FaLanguage,
+  FaGraduationCap,
+} from "react-icons/fa";
+
+const icons = {
+  "arrow-back-up": FiCornerUpLeft,
+  "arrow-left": FiArrowLeft,
+  "arrow-right": FiArrowRight,
+  "arrow-up-right": FiArrowUpRight,
+  "book": FiBookOpen,
+  "bookmark": FiBookmark,
+  "brand-github": FaGithub,
+  "brand-linkedin": FaLinkedin,
+  "briefcase": FiBriefcase,
+  "browser": FiGlobe,
+  "building": FiHome,
+  "building-bank": FaUniversity,
+  "building-hospital": FaHospital,
+  "calendar": FiCalendar,
+  "calendar-event": FiCalendar,
+  "chef-hat": FaUtensils,
+  "circle-filled": FaCircle,
+  "clock": FiClock,
+  "cloud": FiCloud,
+  "code": FiCode,
+  "database": FiDatabase,
+  "device-desktop-code": FiMonitor,
+  "download": FiDownload,
+  "external-link": FiExternalLink,
+  "folder": FiFolder,
+  "headset": FiHeadphones,
+  "info-circle": FiInfo,
+  "language": FaLanguage,
+  "layers-subtract": FiLayers,
+  "layout": FiLayout,
+  "lock": FiLock,
+  "mail": FiMail,
+  "map-pin": FiMapPin,
+  "messages": FiMessageSquare,
+  "microphone": FiMic,
+  "music": FiMusic,
+  "pencil": FiEdit3,
+  "plus": FiPlus,
+  "rocket": FaRocket,
+  "school": FaGraduationCap,
+  "send": FiSend,
+  "server": FiServer,
+  "settings": FiSettings,
+  "shield-lock": FiShield,
+  "stack-2": FiLayers,
+  "star": FiStar,
+  "sun": FiSun,
+  "tag": FiTag,
+  "terminal-2": FiTerminal,
+  "tools-kitchen-2": FaUtensils,
+  "topology-star-3": FiGitBranch,
+  "user": FiUser,
+  "user-check": FiUserCheck,
+  "users": FiUsers,
+} satisfies Record<string, IconType>;
+
+export type IconName = keyof typeof icons;
 
 export type IconProps = {
   name: IconName;
@@ -6,5 +120,10 @@ export type IconProps = {
 };
 
 export function Icon({ name, className }: IconProps) {
-  return <i aria-hidden="true" className={`ti ${name}${className ? ` ${className}` : ""}`} />;
+  const SvgIcon = icons[name];
+  return (
+    <i aria-hidden="true" className={`app-icon${className ? ` ${className}` : ""}`}>
+      <SvgIcon focusable="false" />
+    </i>
+  );
 }

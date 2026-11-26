@@ -29,29 +29,29 @@ export function Blog({ posts }: BlogProps) {
             </div>
             <div className={styles.featuredBody}>
               <div className={styles.featuredTag}>
-                <Icon name="ti-star" />
+                <Icon name="star" />
                 {featured.tag}
               </div>
               <h3 className={styles.featuredTitle}>{featured.title}</h3>
               <p className={styles.featuredExcerpt}>{featured.excerpt}</p>
               <div className={styles.featuredMeta}>
                 <span>
-                  <Icon name="ti-calendar" />
+                  <Icon name="calendar" />
                   {featured.date}
                 </span>
                 {featured.readTime && <span>
-                  <Icon name="ti-clock" />
+                  <Icon name="clock" />
                   {featured.readTime}
                 </span>}
                 {featured.category ? (
                   <span>
-                    <Icon name="ti-tag" />
+                    <Icon name="tag" />
                     {featured.category}
                   </span>
                 ) : null}
               </div>
               <div className={styles.read}>
-                View article preview <Icon name="ti-arrow-right" />
+                View article preview <Icon name="arrow-right" />
               </div>
             </div>
           </Link>
@@ -68,18 +68,18 @@ export function Blog({ posts }: BlogProps) {
             </div>
             <div className={styles.cardBody}>
               <div className={styles.cardTag}>
-                <Icon name="ti-tag" />
+                <Icon name="tag" />
                 {post.tag}
               </div>
               <h3 className={styles.cardTitle}>{post.title}</h3>
               <p className={styles.cardExcerpt}>{post.excerpt}</p>
               <div className={styles.cardMeta}>
                 <span>
-                  <Icon name="ti-calendar" />
+                  <Icon name="calendar" />
                   {post.date}
                 </span>
                 {post.readTime && <span>
-                  <Icon name="ti-clock" />
+                  <Icon name="clock" />
                   {post.readTime}
                 </span>}
               </div>
@@ -90,7 +90,7 @@ export function Blog({ posts }: BlogProps) {
 
       <div className={`${styles.cta} reveal`}>
         <Link className="button ghostButton" href="/articles">
-          <Icon name="ti-pencil" />
+          <Icon name="pencil" />
           View all articles
         </Link>
       </div>

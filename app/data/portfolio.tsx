@@ -8,54 +8,54 @@ import type {
 } from "../types/portfolio";
 
 export const navItems: NavItem[] = [
-  { label: "About", href: "#about", icon: "ti-user" },
-  { label: "Stack", href: "#stack", icon: "ti-code" },
-  { label: "Experience", href: "#experience", icon: "ti-briefcase" },
-  { label: "Projects", href: "#projects", icon: "ti-folder" },
-  { label: "Blog", href: "#blog", icon: "ti-pencil" },
-  { label: "Contact", href: "#contact", icon: "ti-mail" },
+  { label: "About", href: "#about", icon: "user" },
+  { label: "Stack", href: "#stack", icon: "code" },
+  { label: "Experience", href: "#experience", icon: "briefcase" },
+  { label: "Projects", href: "#projects", icon: "folder" },
+  { label: "Blog", href: "#blog", icon: "pencil" },
+  { label: "Contact", href: "#contact", icon: "mail" },
 ];
 
 export const stats: StatItem[] = [
-  { icon: "ti-calendar", value: "10", suffix: "+", label: "Years" },
-  { icon: "ti-rocket", value: "30", suffix: "+", label: "Projects" },
-  { icon: "ti-language", value: "3", label: "Help centre languages" },
-  { icon: "ti-layers-subtract", value: "6", suffix: "+", label: "Stacks" },
+  { icon: "calendar", value: "10", suffix: "+", label: "Years" },
+  { icon: "rocket", value: "30", suffix: "+", label: "Projects" },
+  { icon: "language", value: "3", label: "Help centre languages" },
+  { icon: "layers-subtract", value: "6", suffix: "+", label: "Stacks" },
 ];
 
 export const strengths: StrengthItem[] = [
   {
-    icon: "ti-topology-star-3",
+    icon: "topology-star-3",
     title: "System design",
     description:
       "Define application boundaries and weigh trade-offs around access, state, and maintainability",
   },
   {
-    icon: "ti-layers-subtract",
+    icon: "layers-subtract",
     title: "Problem decomposition",
     description:
       "Turn complex requirements into clear decisions and manageable implementation steps",
   },
   {
-    icon: "ti-device-desktop-code",
+    icon: "device-desktop-code",
     title: "Reliable user flows",
     description:
       "Work through loading states, validation, and failure cases so users can complete their tasks",
   },
   {
-    icon: "ti-database",
+    icon: "database",
     title: "Data and access",
     description:
       "Connect data models, authentication, and permissions to the rules of the product",
   },
   {
-    icon: "ti-users",
+    icon: "users",
     title: "Team collaboration",
     description:
       "Clarify requirements, explain technical decisions, and work through feedback with the team",
   },
   {
-    icon: "ti-rocket",
+    icon: "rocket",
     title: "End-to-end ownership",
     description:
       "Follow solutions through implementation, testing, deployment, and production support",
@@ -64,7 +64,7 @@ export const strengths: StrengthItem[] = [
 
 export const stackGroups: StackGroup[] = [
   {
-    icon: "ti-layout",
+    icon: "layout",
     label: "Frontend",
     items: [
       { label: "Next.js", level: "high" },
@@ -81,7 +81,7 @@ export const stackGroups: StackGroup[] = [
     ],
   },
   {
-    icon: "ti-server",
+    icon: "server",
     label: "Backend",
     items: [
       { label: "Node.js / Express.js", level: "high" },
@@ -94,7 +94,7 @@ export const stackGroups: StackGroup[] = [
     ],
   },
   {
-    icon: "ti-database",
+    icon: "database",
     label: "Data",
     items: [
       { label: "MySQL", level: "high" },
@@ -106,7 +106,7 @@ export const stackGroups: StackGroup[] = [
     ],
   },
   {
-    icon: "ti-settings",
+    icon: "settings",
     label: "DevOps & Tools",
     items: [
       { label: "GitLab / Git", level: "high" },
@@ -128,10 +128,10 @@ export const experience: ExperienceItem[] = [
     period: "2025 - now",
     current: true,
     role: "Lead Frontend Engineer",
-    roleIcon: "ti-topology-star-3",
+    roleIcon: "topology-star-3",
     company: "Gospodar zdravja d.o.o. | Soamed",
     dates: "May 2025 - present · Ljubljana",
-    companyIcon: "ti-building",
+    companyIcon: "building",
     note: "Own the frontend architecture of a multi-tenant SaaS platform, including authentication, organization switching, roles, and plan-based features. Built a full-stack patient recovery app, a booking frontend, and a multilingual help centre; created and manage project repositories and handle releases.",
     tags: [
       "Multi-tenant SaaS",
@@ -150,10 +150,10 @@ export const experience: ExperienceItem[] = [
     period: "2023 - now",
     current: true,
     role: "Freelance Web Developer",
-    roleIcon: "ti-user-check",
+    roleIcon: "user-check",
     company: "Independent",
     dates: "Dec 2023 - present · Ljubljana",
-    companyIcon: "ti-briefcase",
+    companyIcon: "briefcase",
     note: "New web apps, bug fixes, additional features, and small business websites. I work with clients to define the scope and choose a suitable stack, from custom applications to Hugo and WordPress sites.",
     tags: [
       "Full-stack projects",
@@ -169,10 +169,10 @@ export const experience: ExperienceItem[] = [
   {
     period: "2022 - 2023",
     role: "Frontend Developer",
-    roleIcon: "ti-layout",
+    roleIcon: "layout",
     company: "XLAB",
     dates: "Jun 2022 - Dec 2023 · Ljubljana",
-    companyIcon: "ti-building",
+    companyIcon: "building",
     note: "Built Vue, Angular, and React interfaces in the research team for businesses, public institutions, and European projects. Delivered Hugo website frontends with the design team, improved performance, and deployed approved releases through GitLab CI/CD.",
     tags: [
       "Vue",
@@ -188,10 +188,10 @@ export const experience: ExperienceItem[] = [
   {
     period: "2015 - 2021",
     role: "Web Developer",
-    roleIcon: "ti-stack-2",
+    roleIcon: "stack-2",
     company: "Soft Smart Services",
     dates: "Aug 2015 - Dec 2021",
-    companyIcon: "ti-building",
+    companyIcon: "building",
     note: "Independent contractor building websites, online stores, and web apps, mostly for clients in India and the USA. Worked directly with clients from requirements to launch, including hosting, SEO, and Google Analytics.",
     tags: [
       "Client websites",
@@ -207,10 +207,10 @@ export const experience: ExperienceItem[] = [
   {
     period: "2014 - 2015",
     role: "Software Support",
-    roleIcon: "ti-headset",
+    roleIcon: "headset",
     company: "IN Technologies (P) Ltd",
     dates: "Mar 2014 - Jun 2015 · Gurugram, India",
-    companyIcon: "ti-building",
+    companyIcon: "building",
     note: "Software troubleshooting for clients in the US, Canada and the UK.",
     tags: [
       "Software support",
@@ -244,24 +244,24 @@ export const marqueeItems = [
 export const contactLinks: ContactLink[] = [
   {
     href: "mailto:ranjeetkumar2311@gmail.com",
-    icon: "ti-mail",
+    icon: "mail",
     label: "Email - opens your mail app",
     value: "ranjeetkumar2311@gmail.com",
   },
   {
     href: "https://www.linkedin.com/in/ranjeet-dev/",
-    icon: "ti-brand-linkedin",
+    icon: "brand-linkedin",
     label: "LinkedIn",
     value: "linkedin.com/in/ranjeet-dev",
   },
   {
     href: "https://github.com/ranjeet2311",
-    icon: "ti-brand-github",
+    icon: "brand-github",
     label: "GitHub",
     value: "github.com/ranjeet2311",
   },
   {
-    icon: "ti-map-pin",
+    icon: "map-pin",
     label: "Location",
     value: "Ljubljana, Slovenia / EU",
   },

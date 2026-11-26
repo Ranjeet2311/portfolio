@@ -291,7 +291,19 @@
 
 @include down("desktop") {
   .hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .left {
+    border-right: 0;
+  }
+
+  .bio {
+    max-width: none;
+  }
+
+  .heading br {
+    display: none;
   }
 
   .right {

@@ -40,7 +40,7 @@ export function Projects({
         </p>
       )}
       <div className={`${styles.sub} ${reveal} reveal-delay-2`}>
-        <Icon name="ti-lock" />
+        <Icon name="lock" />
         Selected professional work is described without client names or public
         demos.
       </div>
@@ -49,7 +49,7 @@ export function Projects({
         <article className={`${styles.featured} ${reveal}`}>
           <div>
             <div className={styles.featuredTag}>
-              <Icon name="ti-star" />
+              <Icon name="star" />
               {featured.label}
             </div>
             <h3 className={styles.featuredName}>{featured.name}</h3>
@@ -79,18 +79,18 @@ export function Projects({
                   rel="noopener noreferrer"
                   aria-label={`Open ${project.name} demo in a new tab`}
                 >
-                  <Icon name="ti-arrow-up-right" />
+                  <Icon name="arrow-up-right" />
                 </a>
               )}
             </div>
             <div className={styles.type}>
-              <Icon name="ti-tag" />
+              <Icon name="tag" />
               {project.type}
             </div>
             <h3 className={styles.name}>{project.name}</h3>
             <p className={styles.description}>{project.description}</p>
             <div className={styles.note}>
-              <Icon name="ti-terminal-2" />
+              <Icon name="terminal-2" />
               {project.note}
             </div>
             <Pills items={project.tags} mutedFrom={1} />
@@ -102,7 +102,7 @@ export function Projects({
                   rel="noopener noreferrer"
                   aria-label={`${project.name} live demo (opens in a new tab)`}
                 >
-                  <Icon name="ti-external-link" /> Live demo
+                  <Icon name="external-link" /> Live demo
                 </a>
                 {project.code && (
                   <a
@@ -111,7 +111,7 @@ export function Projects({
                     rel="noopener noreferrer"
                     aria-label={`${project.name} source code (opens in a new tab)`}
                   >
-                    <Icon name="ti-brand-github" /> Source code
+                    <Icon name="brand-github" /> Source code
                   </a>
                 )}
               </div>
@@ -122,7 +122,7 @@ export function Projects({
       {!archive && projects.length > displayedProjects.length && (
         <div className={styles.viewMore}>
           <Link href="/projects">
-            View all projects <Icon name="ti-arrow-right" />
+            View all projects <Icon name="arrow-right" />
           </Link>
         </div>
       )}

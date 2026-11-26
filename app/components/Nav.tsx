@@ -57,16 +57,17 @@ export function Nav({
           className={styles.cta}
           href="mailto:ranjeet@example.com?subject=Let's work together"
         >
-          <Icon name="ti-send" />
+          <Icon name="send" />
           Hire me
         </a>
         <button
-          aria-label="Toggle color theme"
+          aria-label={`Switch to ${theme === "ocean" ? "Forest Green" : "Ocean Blue"} theme`}
+          title={`Switch to ${theme === "ocean" ? "Forest Green" : "Ocean Blue"} theme`}
           className={styles.themeToggle}
           onClick={onThemeToggle}
           type="button"
         >
-          {theme === "ocean" ? "Ocean Blue" : "Forest Green"}
+          <Icon name="sun" />
         </button>
       </div>
     </nav>

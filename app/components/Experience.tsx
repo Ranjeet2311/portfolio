@@ -24,7 +24,7 @@ export function Experience({ items }: ExperienceProps) {
           <article className={`${styles.row} reveal`} key={`${item.company}-${item.period}`}>
             <div>
               <div className={styles.period}>
-                <Icon name="ti-calendar-event" />
+                <Icon name="calendar-event" />
                 {item.period}
               </div>
               {item.current ? <span className={styles.current}>Current</span> : null}
@@ -48,14 +48,14 @@ export function Experience({ items }: ExperienceProps) {
 
       <div className={`${styles.details} reveal`}>
         <div>
-          <Icon name="ti-school" />
+          <Icon name="school" />
           <div>
             <h3>Education</h3>
             <p>BA Programme, Delhi University, 2014</p>
           </div>
         </div>
         <div>
-          <Icon name="ti-language" />
+          <Icon name="language" />
           <div>
             <h3>Languages</h3>
             <p>English (native or bilingual), Hindi (native), Slovenian (elementary)</p>

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
-export type IconName = `ti-${string}`;
+import type { IconName } from "../components/ui/Icon";
+export type { IconName } from "../components/ui/Icon";
 
 export type NavItem = {
   label: string;

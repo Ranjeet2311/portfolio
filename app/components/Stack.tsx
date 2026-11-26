@@ -33,7 +33,7 @@ export function Stack({ groups }: StackProps) {
             <div className={styles.items}>
               {group.items.map((item) => (
                 <div className={stackItemClass(item)} key={item.label}>
-                  <Icon name="ti-circle-filled" />
+                  <Icon name="circle-filled" />
                   {item.label}
                 </div>
               ))}

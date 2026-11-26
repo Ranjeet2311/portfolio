@@ -20,10 +20,10 @@ export function Hero({ stats }: HeroProps) {
             Crafting web apps that <br /> <i>scale</i> and <i>last</i>
           </h1>
           <p className={styles.bio}>
-            Full-stack engineer based in Ljubljana, with 10+ years building
-            websites and web applications. I lead frontend architecture at
-            Soamed, from authentication and organization access to the details
-            of the interface.
+            Full-stack engineer based in Ljubljana, with 10+ years turning
+            complex requirements into working software. I bring architecture,
+            hands-on development, and production ownership together to solve
+            engineering challenges and build applications people can rely on.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export function Hero({ stats }: HeroProps) {
           </div> */}
           <div className={styles.buttons}>
             <a className="button primaryButton" href="#projects">
-              <Icon name="ti-arrow-right" />
+              <Icon name="arrow-right" />
               View my work
             </a>
             <a
@@ -50,11 +50,11 @@ export function Hero({ stats }: HeroProps) {
               href="/Ranjeet-Kumar-CV.pdf"
               download
             >
-              <Icon name="ti-download" />
+              <Icon name="download" />
               Download CV
             </a>
             <a className="button ghostButton" href="#contact">
-              <Icon name="ti-mail" />
+              <Icon name="mail" />
               Get in touch
             </a>
           </div>
@@ -139,7 +139,7 @@ export function Hero({ stats }: HeroProps) {
         </div>
 
         <div className={styles.location}>
-          <Icon name="ti-map-pin" />
+          <Icon name="map-pin" />
           <span>
             Ljubljana, Slovenia / available across <b>Europe</b>
           </span>

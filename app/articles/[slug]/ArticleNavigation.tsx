@@ -43,7 +43,7 @@ export function ArticleNavigation({ currentSlug, currentTitle, nextArticle }: Ar
   return (
     <nav className={styles.navigation} aria-label="Article navigation">
       <Link className={styles.navLink} href="/articles">
-        <Icon name="ti-arrow-left" />
+        <Icon name="arrow-left" />
         All articles
       </Link>
       {previous ? (
@@ -52,12 +52,12 @@ export function ArticleNavigation({ currentSlug, currentTitle, nextArticle }: Ar
           href={previous.href}
           title={`Previously opened: ${previous.title}`}
         >
-          <Icon name="ti-arrow-back-up" />
+          <Icon name="arrow-back-up" />
           Previous article
         </Link>
       ) : (
         <span className={`${styles.navLink} ${styles.disabled}`} title="Open another article first">
-          <Icon name="ti-arrow-back-up" />
+          <Icon name="arrow-back-up" />
           Previous article
         </span>
       )}
@@ -68,12 +68,12 @@ export function ArticleNavigation({ currentSlug, currentTitle, nextArticle }: Ar
           title={`Next article: ${nextArticle.title}`}
         >
           Next article
-          <Icon name="ti-arrow-right" />
+          <Icon name="arrow-right" />
         </Link>
       ) : (
         <span className={`${styles.navLink} ${styles.disabled}`} title="This is the final article">
           Next article
-          <Icon name="ti-arrow-right" />
+          <Icon name="arrow-right" />
         </span>
       )}
     </nav>

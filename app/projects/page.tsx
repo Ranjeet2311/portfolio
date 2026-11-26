@@ -15,10 +15,10 @@ export default function ProjectsPage() {
     <main>
       <header className={styles.header}>
         <Link href="/" className={styles.brand}>
-          <Icon name="ti-code" /> ranjeet.dev
+          <Icon name="code" /> ranjeet.dev
         </Link>
         <Link href="/#projects">
-          <Icon name="ti-arrow-left" /> Back to portfolio
+          <Icon name="arrow-left" /> Back to portfolio
         </Link>
       </header>
       <Projects featured={featuredProject} projects={projects} archive />

@@ -39,7 +39,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     <main className={styles.page}>
       <header className={styles.header}>
         <Link className={styles.brand} href="/">
-          <Icon name="ti-code" />
+          <Icon name="code" />
           ranjeet<em>.dev</em>
         </Link>
         <ArticleNavigation
@@ -58,9 +58,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <h1>{post.title}</h1>
           <p className={styles.lede}>{post.excerpt}</p>
           <div className={styles.meta}>
-            <span><Icon name="ti-calendar" />{post.date}</span>
-            {post.readTime && <span><Icon name="ti-clock" />{post.readTime}</span>}
-            <span><Icon name="ti-user" />Ranjeet Kumar</span>
+            <span><Icon name="calendar" />{post.date}</span>
+            {post.readTime && <span><Icon name="clock" />{post.readTime}</span>}
+            <span><Icon name="user" />Ranjeet Kumar</span>
           </div>
         </header>
 
@@ -68,7 +68,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <div className={styles.articleHeader}>
             <p className={styles.lede}>This is an article preview. The original is published on LinkedIn; the link below opens my article collection.</p>
             <a className="button primaryButton" href={post.sourceHref} target="_blank" rel="noopener noreferrer">
-              Browse my LinkedIn articles <Icon name="ti-external-link" />
+              Browse my LinkedIn articles <Icon name="external-link" />
             </a>
           </div>
         ) : <div className={styles.articleLayout}>
@@ -95,7 +95,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
             <div className={styles.articleEnd}>
               <span>Thanks for reading.</span>
-              <Link href="/articles">Explore more articles <Icon name="ti-arrow-right" /></Link>
+              <Link href="/articles">Explore more articles <Icon name="arrow-right" /></Link>
             </div>
           </div>
         </div>}

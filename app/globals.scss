@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css");
 @import "./styles/tokens";
 @import "./styles/shared";
 
@@ -85,8 +84,20 @@ select {
   transition-delay: 0.4s;
 }
 
-.ti {
+.app-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-style: normal;
   line-height: 1;
+  vertical-align: -0.125em;
+}
+
+.app-icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
 }
 
 @keyframes fade-slide-up {

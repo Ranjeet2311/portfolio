@@ -7,7 +7,7 @@ export type ContactProps = {
 };
 
 export function Contact({ links }: ContactProps) {
-  const email = links.find((link) => link.icon === "ti-mail");
+  const email = links.find((link) => link.icon === "mail");
   return (
     <section className={styles.section} id="contact">
       <div className={styles.grid}>
@@ -22,14 +22,14 @@ export function Contact({ links }: ContactProps) {
             Based in Ljubljana, working remotely across Europe.
           </p>
           <div className={styles.hint}>
-            <Icon name="ti-info-circle" />
+            <Icon name="info-circle" />
             Clicking below opens your email client: <span>{email?.value}</span>
           </div>
           <a
             className={styles.button}
             href={email?.href}
           >
-            <Icon name="ti-mail" />
+            <Icon name="mail" />
             Send me a message
           </a>
         </div>
@@ -45,7 +45,7 @@ export function Contact({ links }: ContactProps) {
                   <div className={styles.linkLabel}>{link.label}</div>
                   <div className={styles.linkValue}>{link.value}</div>
                 </div>
-                {link.href ? <Icon className={styles.linkArrow} name="ti-arrow-up-right" /> : null}
+                {link.href ? <Icon className={styles.linkArrow} name="arrow-up-right" /> : null}
               </>
             );
 
